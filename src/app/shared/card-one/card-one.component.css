@@ -1,0 +1,653 @@
+* {
+  font-family: Averta-Regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Averta-Regular;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 300;
+  color: #68572d;
+  letter-spacing: 0.8px;
+  line-height: 93.5%;
+}
+
+p {
+  color: #68572d;
+  margin: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+.cards {
+  margin-top: 3em;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: 40px;
+}
+
+.chef-content {
+  padding: 6%;
+}
+
+.cards .like {
+  width: 30px;
+  height: 25px;
+  position: absolute;
+  display: inline-block;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cards .like:active,
+.cards.like:focus {
+  transform: scale(1.1);
+}
+
+.red-heart-icon {
+  fill: #d0312d !important;
+}
+
+.likes-number {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 62px;
+  height: 30px;
+  padding: 6px 10px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.single-card {
+  max-width: 22.7%;
+  min-width: 22.7%;
+  height: 0%;
+  background-color: white;
+  color: black;
+  font-family: Averta-Regular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 1em;
+  border: 0;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.chef-image {
+  min-height: 290px;
+  max-height: 290px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.mat-card-image {
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-image:first-child {
+  margin-top: 0;
+}
+
+.card-title {
+  font-family: Averta-Regular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0px;
+  height: 38px;
+}
+
+.card-text {
+  font-family: Averta-Regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 4%;
+}
+
+/*specifc styling for chef-table page only */
+
+.chefTable-cards {
+  padding-top: 100px;
+}
+
+.chefTable-card {
+  max-width: 31%;
+  min-width: 31%;
+  height: 427px;
+}
+
+.chefTable-card-image {
+  height: 55%;
+}
+
+.chefTable-card-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+  height: 24px;
+}
+
+/*specifc styling for chefs page only */
+
+.chefs-cards {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+.chefsPage-card {
+  max-width: 31%;
+  min-width: 31%;
+}
+
+.chefsPage-card-image {
+  min-height: 320px;
+  max-height: 320px;
+  object-position: top;
+}
+
+.chefsPage-card-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 100%;
+  height: 30px;
+}
+
+.chefsPage-card-text {
+  height: 35px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/*specific styling for menu page only */
+
+.dashboardMenu-card-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  height: 18px;
+}
+
+.menuPage-card {
+  max-width: 31%;
+  min-width: 31%;
+  height: 0%;
+}
+
+.menuPage-card-image {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.menuPage-card-title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100%;
+  height: 24px;
+}
+
+.menuPage-card-text {
+  height: 35px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.card-tags {
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.family-tag {
+  width: 63px;
+  height: 24px;
+  background: #f6f6f6;
+  border: hidden;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 5px;
+  text-align: center;
+  padding: 4px 10px 6px 10px;
+}
+
+.seats-tag {
+  width: 68px;
+  height: 24px;
+  background: #f6f6f6;
+  border: hidden;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 5px;
+  text-align: center;
+  padding: 4px 10px 6px 10px;
+}
+
+.hours-tag {
+  width: 77px;
+  height: 24px;
+  background: #f6f6f6;
+  border: hidden;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 5px;
+  text-align: center;
+  padding: 4px 10px 6px 10px;
+}
+
+.price-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7%;
+}
+
+.amount {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px !important;
+  line-height: 110%;
+}
+
+.amount-count {
+  width: 10px;
+  height: 20px;
+}
+
+.add-amount-btn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: #ffdf36;
+  border: hidden;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.add-amount-btn-active {
+  border: 2px solid #ffdf36;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: white;
+}
+
+.remove-amount-btn-active {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffdf36;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: white;
+  margin-right: 10px;
+}
+
+/* end of Menu page styling */
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.plus-icon {
+  padding-top: 0.2em;
+  padding-left: 0.1em;
+}
+
+.minus-icon-div {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .chef-image {
+    min-height: 270px;
+    max-height: 270px;
+  }
+  .chefsPage-card-image {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .chefTable-card-image {
+    min-height: 215px;
+    max-height: 215px;
+  }
+  .menuPage-card-image {
+    min-height: 185px;
+    max-height: 185px;
+  }
+  .card-title {
+    font-size: 1.1em;
+  }
+  .card-text {
+    font-size: 0.9em;
+  }
+  /* chefs page */
+  .chefsPage-card-title {
+    font-size: 1.5em;
+  }
+  .chefsPage-card-text {
+    font-size: 0.9em;
+  }
+  /* chef tables page */
+  /* .chefTable-card {
+    height: 390px;
+  } */
+  .chefsTable-card-title {
+    font-size: 1.5em;
+  }
+  .chefsTable-card-text {
+    font-size: 0.9em;
+  }
+  /* menu Page */
+  /* .menuPage-card-title{
+    font-size: 1.3em;
+  } */
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards {
+    margin-top: 2em;
+  }
+  .chef-image {
+    min-height: 240px;
+    max-height: 240px;
+  }
+  .chefsPage-card-image {
+    min-height: 270px;
+    max-height: 270px;
+  }
+  .chefTable-card-image {
+    min-height: 170px;
+    max-height: 170px;
+  }
+  .menuPage-card-image {
+    min-height: 165px;
+    max-height: 165px;
+  }
+  .card-title {
+    font-size: 1em;
+  }
+  .card-text {
+    font-size: 0.7em;
+  }
+  .cards {
+    row-gap: 40px;
+    column-gap: 3%;
+  }
+  .cards .like {
+    width: 25px;
+    height: 20px;
+  }
+  /* chefs page */
+  .chefsPage-card-title {
+    font-size: 1.3em;
+  }
+  .chefsPage-card-text {
+    font-size: 0.8em;
+  }
+  /* chefs table page */
+  .chefTable-card-title {
+    font-size: 1.1em;
+    height: 20px;
+  }
+  /* menu page */
+  .menuPage-card-title {
+    font-size: 1.1em;
+  }
+  .menuPage-card-text {
+    font-size: 0.8em;
+  }
+  /*  */
+  .family-tag {
+    font-size: 0.8em;
+  }
+  .video-tag {
+    width: 20px;
+    height: 20px;
+  }
+  .price {
+    font-size: 1em !important;
+  }
+  .add-amount-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .plus-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cards {
+    margin-top: 2em;
+    column-gap: 3%;
+    row-gap: 25px;
+  }
+  .menuCards {
+    gap: 7%;
+    row-gap: 25px;
+    margin-top: 3em;
+  }
+  .single-card {
+    max-width: 30%;
+  }
+  .chefsPage-card {
+    max-width: 45%;
+  }
+  .menuPage-card {
+    max-width: 46%;
+  }
+  .chef-image {
+    min-height: 210px;
+    max-height: 210px;
+  }
+  .chefsPage-card-image {
+    min-height: 250px;
+    max-height: 250px;
+  }
+  .chefTable-card-image {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .menuPage-card-image {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .card-title {
+    font-size: 0.9em;
+    height: 34px;
+  }
+  .menuPage-card-title {
+    height: 24px;
+  }
+  .card-text {
+    font-size: 0.7em;
+  }
+  .cards .like {
+    right: 10px;
+    top: 10px;
+    width: 20px;
+    height: 15px;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .cards {
+    margin-top: 1em;
+  }
+  .menuCards {
+    row-gap: 20px;
+    margin-top: 2em;
+  }
+  .single-card {
+    max-width: 45%;
+    min-width: 100px !important;
+  }
+  .chef-image {
+    min-height: 170px;
+    max-height: 170px;
+  }
+  .chefsPage-card-image {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .chefTable-card-image {
+    min-height: 130px;
+    max-height: 130px;
+  }
+  .menuPage-card-image {
+    min-height: 130px;
+    max-height: 130px;
+  }
+  .cards {
+    column-gap: 5%;
+  }
+  .card-tags {
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+  }
+  .card-title {
+    font-size: 0.7em;
+    height: 2em;
+    line-height: 1em;
+  }
+  .card-text {
+    font-size: 0.6em;
+    line-height: 1.5em;
+    height: 4em;
+  }
+  .price {
+    font-size: 0.7em !important;
+  }
+  .add-amount-btn {
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .remove-amount-btn-active {
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .family-tag {
+    height: 1.5em;
+    font-size: 0.7em;
+  }
+  .video-tag {
+    height: 1.2em;
+  }
+  .seats-tag {
+    width: 50%;
+    height: 2.3em;
+    font-size: 0.7em;
+  }
+  .hours-tag {
+    width: 50%;
+    height: 2.3em;
+    font-size: 0.7em;
+  }
+  .likes-number {
+    left: 7px;
+    top: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 42px;
+    height: 20px;
+    padding: 6px 10px;
+    background: #ffffff;
+    border-radius: 3px;
+    font-size: 0.7em;
+  }
+  .thumbUp {
+    width: 1.4em;
+    height: 1.4em;
+  }
+  .plus-icon {
+    padding-top: 0.2em;
+    padding-left: 3%;
+  }
+  .minus-icon {
+    /* padding-bottom: 0.1em; */
+    margin-bottom: 0.15em;
+    padding-right: 0.25em;
+    padding-left: 0.2em;
+  }
+  .add-amount-btn {
+    margin-left: 0.1em;
+  }
+  .remove-amount-btn-active {
+    margin-right: 0.1em;
+    /* padding-bottom: 1em; */
+  }
+  .amount-count {
+    text-align: center;
+  }
+  .minus-icon-div {
+    padding: 0%;
+    padding-bottom: 2px;
+  }
+}

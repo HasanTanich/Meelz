@@ -1,0 +1,159 @@
+<div [ngClass]="dashboard ? 'Masterclasses no-select' : ''">
+  <app-top-paginator
+    *ngIf="dashboard"
+    [cards]="cards"
+    [dataSource]="dataSource"
+    [pageSize]="3"
+    [title]="title"
+    [urlRoute]="urlRoute"
+    [whiteBackground]="false"
+    (newItemEvent)="addItem($event)"
+  ></app-top-paginator>
+
+  <div class="cards-master">
+    <mat-card
+      class="example-card-master"
+      *ngFor="
+        let mc of cards
+          | async
+          | filterMasterClass: searchText:isActive
+          | slice: start:end
+          | orderByNumerical: 'rating':reverseRating
+          | orderByAlphabatical: 'classDescription':reverseName;
+        let i = index
+      "
+      style="background-image: url({{ mc.masterClass.background }});"
+      [routerLink]="['/master-classes', mc.id]"
+    >
+      <div class="action-likes">
+        <div class="action-likes-numb-like">
+          <div class="like-icon like-icon-box">
+            <div class="thumb-up">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 18 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.523 0.370295C9.25503 2.04029 7.62403 3.53026 6.47803 4.46026C5.92803 4.90026 5.58203 5.56031 5.58203 6.26031V13.5503C5.58203 14.9303 6.62503 15.2503 7.14603 15.2403H11.715C13.447 15.2403 14.21 14.9203 14.68 14.2303C15.867 12.5103 16.599 10.1203 16.967 9.05035C17.947 6.18035 17.163 5.14031 15.483 5.14031H11.618C11.433 5.14031 11.29 4.99036 11.323 4.81036C11.412 4.32036 11.632 3.45035 12.077 2.30035C12.477 1.27035 12.078 0.560324 11.59 0.150324C11.258 -0.129676 10.784 0.0302945 10.523 0.370295Z"
+                  fill="#1CBD8D"
+                />
+                <path
+                  d="M0.777344 13.8801V6.50012C0.777344 5.75012 1.39735 5.14014 2.16035 5.14014C2.92435 5.14014 3.54436 5.75012 3.54436 6.50012V13.8801C3.54436 14.6301 2.92435 15.2401 2.16035 15.2401C1.39735 15.2401 0.777344 14.6301 0.777344 13.8801Z"
+                  fill="#1CBD8D"
+                />
+              </svg>
+            </div>
+            <div class="number-of-likes">
+              <p style="color: black; padding-top: 100%; padding-left: 50%">
+                {{ mc.likes }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="action-likes-like">
+          <svg
+            width="30"
+            height="25"
+            viewBox="0 0 30 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            class="like"
+            (click)="like($event, mc)"
+            [ngClass]="[mc.liked ? 'red-heart-icon' : '']"
+          >
+            <g filter="url(#filter0_b)">
+              <path
+                d="M30 7.38813C30 15.2911 15 25 15 25C15 25 0 15.2911 0 7.38813C0 -0.514862 10 -2.5 15 3.53554C20.0695 -2.51854 30 -0.514862 30 7.38813Z"
+                fill="black"
+                fill-opacity="0.15"
+              />
+              <path
+                d="M14.2299 4.17349L14.9959 5.09808L15.7667 4.17755C18.0548 1.44504 21.4176 0.554327 24.1724 1.20144C26.8837 1.83832 29 3.94729 29 7.38813C29 9.06457 28.1947 10.9488 26.8353 12.903C25.4883 14.8394 23.6728 16.7371 21.8267 18.4183C19.9851 20.0955 18.1392 21.5337 16.7515 22.5538C16.0584 23.0632 15.4817 23.4669 15.0795 23.7423C15.0522 23.761 15.0257 23.7791 15 23.7967C14.9743 23.7791 14.9478 23.761 14.9205 23.7423C14.5183 23.4669 13.9416 23.0632 13.2485 22.5538C11.8608 21.5337 10.0149 20.0955 8.17332 18.4183C6.32719 16.7371 4.51168 14.8394 3.16467 12.903C1.80527 10.9488 1 9.06457 1 7.38813C1 3.95203 3.1286 1.84472 5.85239 1.20869C8.61928 0.562594 11.9791 1.45647 14.2299 4.17349Z"
+                stroke="white"
+                stroke-width="2"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_b"
+                x="-4"
+                y="-4"
+                width="38"
+                height="33"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feGaussianBlur in="BackgroundImage" stdDeviation="2" />
+                <feComposite
+                  in2="SourceAlpha"
+                  operator="in"
+                  result="effect1_backgroundBlur"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_backgroundBlur"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+      <div class="bottom-of-card">
+        <div class="meal-name">
+          {{ mc.masterClass.heading }}
+        </div>
+        <div class="b-o-c-price-action">
+          <div class="b-o-c-price">
+            <p style="color: white" class="two">
+              <span class="one">From</span> {{ mc.masterClass.price }}
+            </p>
+          </div>
+          <div class="b-o-c-action">
+            <div *ngIf="i % 2 !== 0; else elseBlock5">
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12.5" cy="12.5" r="12.5" fill="#FFDF36" />
+                <path
+                  d="M6.46094 9.58407C6.46094 8.8934 7.12485 8.3335 7.94383 8.3335H13.5539C14.3729 8.3335 15.0368 8.8934 15.0368 9.58407V15.4163C15.0368 16.1069 14.3729 16.6668 13.5539 16.6668H7.94383C7.12485 16.6668 6.46094 16.1069 6.46094 15.4163V9.58407Z"
+                  fill="#68572D"
+                />
+                <path
+                  d="M19.7269 9.58407V15.75C19.7269 16.2818 18.9898 16.5708 18.5076 16.2281L16.3387 14.6867V10.6474L18.5076 9.10593C18.9898 8.76325 19.7269 9.05231 19.7269 9.58407Z"
+                  fill="#68572D"
+                />
+              </svg>
+            </div>
+            <ng-template #elseBlock5>
+              <svg
+                width="25"
+                height="25"
+                viewBox="0 0 25 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="12.5" cy="12.5" r="12.5" fill="#1CBD8D" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M12.5009 20.8334C12.5009 20.8334 18.0564 14.1795 18.0564 11.1112C18.0564 8.04297 15.5691 5.55566 12.5009 5.55566C9.43262 5.55566 6.94531 8.04297 6.94531 11.1112C6.94531 14.1795 12.5009 20.8334 12.5009 20.8334ZM12.5009 13.889C14.035 13.889 15.2786 12.6453 15.2786 11.1112C15.2786 9.5771 14.035 8.33344 12.5009 8.33344C10.9667 8.33344 9.72309 9.5771 9.72309 11.1112C9.72309 12.6453 10.9667 13.889 12.5009 13.889Z"
+                  fill="white"
+                />
+              </svg>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

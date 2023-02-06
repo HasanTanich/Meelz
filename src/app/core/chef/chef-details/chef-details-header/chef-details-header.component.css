@@ -1,0 +1,106 @@
+@import url(//db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta-Regular);
+@font-face {
+  font-family: "Averta-Regular";
+  src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot");
+  src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff") format("woff"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.svg#Averta-Regular") format("svg");
+}
+.headingDiv {
+  display: flex;
+  flex-direction: row;
+}
+.headingDivTitle {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.chef-profile-image {
+  width: 372px;
+  height: 372px;
+  margin-top: -120px;
+  margin-left: 9%;
+  border: 5px solid white;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top;
+  /* object-fit: cover; */
+}
+.headingDetailsDiv {
+  font-family: Averta-Regular;
+  margin: 0 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.headingDetailsDivChef {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+}
+.headingDivDesc {
+  width: 720px;
+  margin-top: 10px;
+  color: #373737;
+}
+.restaurantIcons {
+  display: flex;
+  flex-direction: row;
+}
+.restaurantIconsDesc {
+  color: #373737;
+  margin-left: 10px;
+  padding-top: 2%;
+}
+.socialIcons {
+  padding-top: 2%;
+  display: flex;
+  align-items: center;
+}
+.descriptionDiv {
+  margin-top: 25px;
+  width: 720px;
+  height: 40px;
+}
+@media only screen and (max-width: 768px) {
+  .descriptionDiv {
+    width: 100%;
+    padding-right: 2%;
+  }
+  .headingDivDesc {
+    width: 100%;
+  }
+  .headingDiv {
+    flex-direction: column;
+  }
+  .chef-profile-image {
+    margin-left: 0;
+  }
+  .headingDetailsDiv {
+    margin: 8%!important;
+    height: 45vh;
+  }
+  .chef-profile-image {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .headingDetailsDivChef {
+    flex-direction: column;
+    align-items: center;
+  }
+  .headingDiv {
+    text-align: center;
+  }
+  .socialIcons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .restaurantIcons {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .headingDivTitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,73 @@
+<div fxLayout="column" class="container">
+    <app-header></app-header>
+
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs_item">
+            <a routerLink="/home" class="breadcrumbs_link">Home</a>
+        </li>
+        <li class="breadcrumbs_item">
+            <p>Blog</p>
+        </li>
+    </ul>
+
+    <h1 class="heading">Blog</h1>
+
+    <!-- <app-search-bar (isActive)="onIsActive($event)" (isActive)="onIsActiveChanged($event)" [pageItems]="'chef tables'">
+    </app-search-bar> -->
+
+    <!-- <app-filters-tab [Rating]="'Rating'" [Price]="'Price'" [Family]="'Family'" [Chef]="'Chef'" [Seats]="'Seats'"
+        [Duration]="'Duration'" [chefTablePage]="true" (reverseRating)="onSortRating($event)"
+        (reversePrice)="onSortPrice($event)" (reverseDuration)="onSortDuration($event)"
+        (reverseSeats)="onSortSeats($event)">
+    </app-filters-tab> -->
+
+    <!-- <app-chef-table-card [cards]="allChefTable" [chefTablePage]="true" [searchText]="searchText" [isActive]="isActive"
+        [reverseRating]="reverseRating" [reverseDuration]="reverseDuration" [reverseSeats]="reverseSeats"
+        [reversePrice]="reversePrice" [urlRoute]="'chef-table'" [cardTitle]="'heading'" [cardImage]="'backgroundImg'"
+        [cardDescription]="'description'" [cardSeats]="'groupSize'">
+    </app-chef-table-card> -->
+    <mat-tab-group mat-align-tabs="start">
+        <mat-tab label="All Posts" class="my-class">
+            <div class="chefs">
+                <app-blog-cards [cards]="allBlogs" [chefTablePage]="true" [title]="'Blog'" [urlRoute]="'blog'"
+                    [cardTitle]="'heading'" [cardImage]="'imageUrl'" [pageSizeNumber]="3">
+                </app-blog-cards>
+            </div>  
+            <app-bottom-paginator></app-bottom-paginator>
+        </mat-tab>
+        <mat-tab label="Experiences" class="my-class">
+            <app-blog-cards [cards]="allBlogs" [chefTablePage]="true" [title]="'Blog'" [urlRoute]="'blog'"
+                    [cardTitle]="'heading'" [cardImage]="'imageUrl'" [pageSizeNumber]="3">
+            </app-blog-cards>
+            <app-bottom-paginator></app-bottom-paginator>
+        </mat-tab>
+        <mat-tab label="Recipes" class="my-class">
+            <app-blog-cards [cards]="allBlogs" [chefTablePage]="true" [title]="'Blog'" [urlRoute]="'blog'"
+                    [cardTitle]="'heading'" [cardImage]="'imageUrl'" [pageSizeNumber]="3">
+            </app-blog-cards>
+            <app-bottom-paginator></app-bottom-paginator>
+        </mat-tab>
+        <mat-tab label="News" class="my-class">
+            <app-blog-cards [cards]="allBlogs" [chefTablePage]="true"  [title]="'Blog'" [urlRoute]="'blog'"
+                    [cardTitle]="'heading'" [cardImage]="'imageUrl'" [pageSizeNumber]="3">
+            </app-blog-cards>
+            <app-bottom-paginator></app-bottom-paginator>
+        </mat-tab>
+        <mat-tab label="Lifehacks" class="my-class">
+            <app-blog-cards  [cards]="allBlogs" [chefsPage]="true" [title]="'Blog'" [urlRoute]="'blog'"
+                    [cardTitle]="'heading'" [cardImage]="'imageUrl'" >
+            </app-blog-cards>
+            <app-bottom-paginator></app-bottom-paginator>
+            <!-- *ngFor="let card of lifeFilter" -->
+        </mat-tab>
+      </mat-tab-group>
+    <!-- <div class="chefs">
+        <app-blog-cards [cards]="allBlogs" [chefTablePage]="true" [title]="'Blog'" [urlRoute]="'blog'"
+            [cardTitle]="'heading'" [cardImage]="'imageUrl'" [pageSizeNumber]="3">
+        </app-blog-cards>
+    </div> -->
+
+
+</div>
+
+<app-footer></app-footer>

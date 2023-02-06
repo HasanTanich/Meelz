@@ -1,0 +1,57 @@
+<div class="header">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs_item">
+      <a routerLink="/dashboard" class="breadcrumbs_link">Home</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <a *ngIf="chefTable" href="#" class="breadcrumbs_link">Chef's Table</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <p *ngIf="chefTable">{{(chefTable | async)?.chefTableInfo.heading}}</p>
+    </li>
+  </ul>
+  <div class="action-likes">
+    <div class="action-likes-numb-like">
+      <div class="like-icon like-icon-box">
+        <div class="thumb-up">
+          <svg width="20" height="20" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10.523 0.370295C9.25503 2.04029 7.62403 3.53026 6.47803 4.46026C5.92803 4.90026 5.58203 5.56031 5.58203 6.26031V13.5503C5.58203 14.9303 6.62503 15.2503 7.14603 15.2403H11.715C13.447 15.2403 14.21 14.9203 14.68 14.2303C15.867 12.5103 16.599 10.1203 16.967 9.05035C17.947 6.18035 17.163 5.14031 15.483 5.14031H11.618C11.433 5.14031 11.29 4.99036 11.323 4.81036C11.412 4.32036 11.632 3.45035 12.077 2.30035C12.477 1.27035 12.078 0.560324 11.59 0.150324C11.258 -0.129676 10.784 0.0302945 10.523 0.370295Z" fill="#1CBD8D"/>
+            <path d="M0.777344 13.8801V6.50012C0.777344 5.75012 1.39735 5.14014 2.16035 5.14014C2.92435 5.14014 3.54436 5.75012 3.54436 6.50012V13.8801C3.54436 14.6301 2.92435 15.2401 2.16035 15.2401C1.39735 15.2401 0.777344 14.6301 0.777344 13.8801Z" fill="#1CBD8D"/>
+          </svg>
+        </div>
+        <div class="number-of-likes">
+          <p style="color:black;padding-top: 38%; padding-left: 50%">4.5</p>
+        </div>
+      </div>
+      <div class="video-desc">
+        <svg width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12.5" cy="12.5" r="12.5" fill="#FFDF36"/>
+          <path d="M6.46094 9.58456C6.46094 8.89389 7.12485 8.33398 7.94383 8.33398H13.5539C14.3729 8.33398 15.0368 8.89389 15.0368 9.58456V15.4167C15.0368 16.1074 14.3729 16.6673 13.5539 16.6673H7.94383C7.12485 16.6673 6.46094 16.1074 6.46094 15.4167V9.58456Z" fill="#68572D"/>
+          <path d="M19.7269 9.58456V15.7505C19.7269 16.2823 18.9898 16.5713 18.5076 16.2286L16.3387 14.6872V10.6479L18.5076 9.10642C18.9898 8.76374 19.7269 9.0528 19.7269 9.58456Z" fill="#68572D"/>
+        </svg>
+        <p class="video-desc-p">CHEF TABLE</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-left: -2px!important;">
+    <p *ngIf="chefTable" class="heading">{{(chefTable | async)?.chefTableInfo.heading}}</p>
+  </div>
+  <div class="master-class-desc">
+    <p *ngIf="chefTable">{{(chefTable | async)?.chefTableInfo.description}}
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis sit et a sapien. Et eleifend a porta ac tellus aliquet mattis massa. Turpis massa imperdiet senectus ullamcorper vulputate. Ultrices blandit eu adipiscing posuere ut sagittis.
+      Orci arcu id ac urna semper nunc malesuada. Aliquet leo in pellentesque sed vitae nunc. A aliquet netus sodales id feugiat feugiat justo, fames sodales. Eget in vel interdum tortor magna varius suscipit.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis sit et a sapien. Et eleifend a porta ac tellus aliquet mattis massa. Turpis massa imperdiet senectus ullamcorper vulputate. Ultrices blandit eu adipiscing posuere ut sagittis.
+      Orci arcu id ac urna semper nunc malesuada. Aliquet leo in pellentesque sed vitae nunc. A aliquet netus sodales id feugiat feugiat justo, fames sodales. Eget in vel interdum tortor magna varius suscipit.</p>
+  </div>
+  <div class="chef">
+    <div style="width: 7vh; height: 7vh">
+      <img *ngIf="chefTable" width="100%" height="100%" style="border-radius: 50%" src="{{(chefTable | async)?.chefID.imageURL}}">
+    </div>
+    <div class="chef-desc">
+      <p style="color: #373737; height: 5px!important;">By Chef</p>
+      <p *ngIf="chefTable"><b>{{(chefTable | async)?.chefID.chefName}}</b></p>
+      <p *ngIf="chefTable" style="color: #373737">{{(chefTable | async)?.chefID.jobRole}}</p>
+    </div>
+  </div>
+  <mat-divider style="background-color: #EEEEEE!important; height: 1px"></mat-divider>
+</div>

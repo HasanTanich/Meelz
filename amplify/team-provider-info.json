@@ -1,0 +1,59 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-meelz-dev-151712-authRole",
+      "UnauthRoleArn": "arn:aws:iam::934371421717:role/amplify-meelz-dev-151712-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::934371421717:role/amplify-meelz-dev-151712-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-meelz-dev-151712-deployment",
+      "UnauthRoleName": "amplify-meelz-dev-151712-unauthRole",
+      "StackName": "amplify-meelz-dev-151712",
+      "StackId": "arn:aws:cloudformation:us-east-1:934371421717:stack/amplify-meelz-dev-151712/e4935c50-a75a-11eb-b49e-12c270bd7978",
+      "AmplifyAppId": "d2cnppxim7al04"
+    },
+    "categories": {
+      "auth": {
+        "meelzfe7011c5": {
+          "userPoolId": "us-east-1_HkX5v5uaY",
+          "userPoolName": "meelz8fdaa14d_userpool_8fdaa14d-dev",
+          "webClientId": "31goilt5aaqpbo84acs1abfket",
+          "nativeClientId": "31goilt5aaqpbo84acs1abfket"
+        },
+        "meelz6128b93a": {
+          "userPoolId": "us-east-1_DisA6ajGf",
+          "userPoolName": "Meelz",
+          "webClientId": "4o6neking2l7vk5ha8q4lqco1u",
+          "nativeClientId": "4o6neking2l7vk5ha8q4lqco1u"
+        }
+      },
+      "function": {
+        "meelz8fdaa14dDefineAuthChallenge": {
+          "deploymentBucketName": "amplify-meelz-dev-151712-deployment",
+          "s3Key": "amplify-builds/meelz8fdaa14dDefineAuthChallenge-57566d51585a726a4c51-build.zip"
+        },
+        "meelz8fdaa14dCreateAuthChallenge": {
+          "deploymentBucketName": "amplify-meelz-dev-151712-deployment",
+          "s3Key": "amplify-builds/meelz8fdaa14dCreateAuthChallenge-483042446c4373724563-build.zip"
+        },
+        "meelz8fdaa14dVerifyAuthChallengeResponse": {
+          "deploymentBucketName": "amplify-meelz-dev-151712-deployment",
+          "s3Key": "amplify-builds/meelz8fdaa14dVerifyAuthChallengeResponse-64635a546e6e49654876-build.zip"
+        },
+        "meelzd4d3da28CustomMessage": {
+          "REDIRECTURL": "https://meelz.auth.us-east-1.amazoncognito.com/oauth2/idpresponse",
+          "EMAILSUBJECT": "Email verification for Meelz",
+          "EMAILMESSAGE": "Please click on this link to confirm your account",
+          "deploymentBucketName": "amplify-meelz-dev-151712-deployment",
+          "s3Key": "amplify-builds/meelzd4d3da28CustomMessage-4351473347586854672f-build.zip"
+        },
+        "meelz53d4f04bCustomMessage": {
+          "REDIRECTURL": "https://meelz.auth.us-east-1.amazoncognito.com/oauth2/idpresponse",
+          "EMAILSUBJECT": "Meelz verification link",
+          "EMAILMESSAGE": "Please click on provided link to complete your account registration",
+          "deploymentBucketName": "amplify-meelz-dev-151712-deployment",
+          "s3Key": "amplify-builds/meelz53d4f04bCustomMessage-58763845535046695443-build.zip"
+        }
+      }
+    }
+  }
+}

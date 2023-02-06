@@ -1,0 +1,72 @@
+<div class="dates">
+  <div class="section">
+    <div class="alignment type">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.001 1L13.846 8.08398L21.463 8.60101L15.6041 13.496L17.467 20.899L11.001 16.84L4.53503 20.899L6.39801 13.496L0.539062 8.60101L8.15607 8.08398L11.001 1Z" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin-bottom: 0!important; margin-left: 14%">Type</p>
+    </div>
+    <p style="margin: 0!important;">Online</p>
+  </div>
+  <mat-divider style="background-color: #EEEEEE"></mat-divider>
+  <div class="section">
+    <div class="alignment duration" style="max-width: 34%; min-width: 25%">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9.19031 4.01703V9.75403L14.3843 13.326L9.19031 4.01703ZM18.5783 9.75403C18.5783 14.589 14.6593 18.508 9.82428 18.508C4.99028 18.508 1.07031 14.589 1.07031 9.75403C1.07031 4.91903 4.99028 1 9.82428 1C14.6593 1 18.5783 4.91903 18.5783 9.75403Z" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <p style="margin-bottom: 0!important; margin-left: 14%">Duration</p>
+    </div>
+    <p *ngIf="masterClassArray" style="margin: 0!important;">{{masterClassArray.masterClass.duration}} min</p>
+  </div>
+  <mat-divider style="background-color: #EEEEEE; margin-bottom: 1%"></mat-divider>
+  <div class="section">
+    <div class="alignment groupSize">
+      <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.57031 9.74542C11.0556 9.74542 13.0703 7.78101 13.0703 5.35779C13.0703 2.93457 11.0556 0.970215 8.57031 0.970215C6.08503 0.970215 4.07031 2.93457 4.07031 5.35779C4.07031 7.78101 6.08503 9.74542 8.57031 9.74542Z" stroke="#8B8B8B"/>
+        <path d="M14.0435 11.1371C15.6265 13.4211 15.9735 14.9181 16.0495 16.1611C16.0835 16.7121 15.6235 17.1601 15.0705 17.1601H2.07052C1.51852 17.1601 1.05852 16.7121 1.09152 16.1611C1.16952 14.8781 1.53053 13.3191 3.21353 10.9731" stroke="#8B8B8B" stroke-linecap="round"/>
+        <path d="M14.1562 0.753906C16.0072 0.753906 17.5073 2.21687 17.5073 4.02087C17.5073 5.31187 16.7413 6.42689 15.6273 6.95789" stroke="#8B8B8B" stroke-linecap="round"/>
+        <path d="M18.2335 8.32422C19.3065 9.87322 19.6165 10.9352 19.7065 11.8112C19.7625 12.3612 19.2955 12.8102 18.7435 12.8102H18.0625" stroke="#8B8B8B" stroke-linecap="round"/>
+      </svg>
+      <p style="margin-bottom: 0!important; margin-left: 10%">Group size</p>
+    </div>
+    <p *ngIf="masterClassArray" style="margin: 0!important;">Up to {{masterClassArray.masterClass.groupSize}} people</p>
+  </div>
+  <mat-divider style="background-color: #EEEEEE; margin-top: 1%"></mat-divider>
+  <div class="section">
+    <div class="alignment language">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.15698 11.411C1.15698 11.411 3.36603 12.933 9.75403 12.933C16.142 12.933 18.351 11.411 18.351 11.411M9.75403 18.508C8.91203 18.508 8.09699 18.389 7.32599 18.167L9.75403 18.508ZM9.75403 18.508C10.596 18.508 11.411 18.389 12.182 18.167L9.75403 18.508ZM9.75403 18.508V1V18.508ZM9.75403 1C8.91203 1 8.09699 1.119 7.32599 1.341L9.75403 1ZM9.75403 1C10.596 1 11.411 1.119 12.182 1.341L9.75403 1ZM7.32599 1.341C4.19099 2.244 1.77798 4.85198 1.15698 8.09698L7.32599 1.341ZM7.32599 1.341C7.32599 1.341 4.75897 4.14903 4.75897 9.75403C4.75897 15.359 7.32599 18.167 7.32599 18.167V1.341ZM7.32599 18.167C4.19099 17.264 1.77798 14.655 1.15698 11.411L7.32599 18.167ZM12.182 1.341C15.317 2.244 17.73 4.85198 18.351 8.09698L12.182 1.341ZM12.182 1.341C12.182 1.341 14.743 3.69403 14.743 9.75403C14.743 15.814 12.182 18.167 12.182 18.167V1.341ZM12.182 18.167C15.317 17.264 17.73 14.655 18.351 11.411L12.182 18.167ZM1.15698 8.09698C1.05398 8.63398 1 9.18703 1 9.75403C1 10.32 1.05398 10.874 1.15698 11.411V8.09698ZM1.15698 8.09698C1.15698 8.09698 3.71603 6.16803 9.75403 6.16803C15.792 6.16803 18.351 8.09698 18.351 8.09698H1.15698ZM18.351 8.09698C18.454 8.63398 18.508 9.18703 18.508 9.75403C18.508 10.32 18.454 10.874 18.351 11.411V8.09698Z" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+
+      <p style="margin-bottom: 0!important; margin-left: 9%">Language</p>
+    </div>
+    <p *ngIf="masterClassArray" style="margin: 0!important;">{{masterClassArray.masterClass.language}}</p>
+  </div>
+  <mat-divider style="background-color: #EEEEEE"></mat-divider>
+  <div style="padding-top: 5%">
+    <p *ngIf="masterClassArray">From <b>AED {{masterClassArray.masterClass.price}}</b> per person</p>
+  </div>
+  <div>
+    <div fxLayout="row">
+      <button class="datesBtn" fxFlex="60">See dates</button>
+      <div fxFlex="7"></div>
+      <div fxFlex="33">
+        <div class="likeBtn" fxFlex="45">
+          <svg style="position: relative; top: 1px;" width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.73999 3.05291L10.5 3.94091L11.26 3.05694C12.78 1.28894 15.02 0.711939 16.86 1.12994C18.65 1.53894 20 2.86792 20 5.02392C20 6.05892 19.48 7.27095 18.55 8.57995C17.62 9.86995 16.37 11.1429 15.09 12.2779C13.81 13.4099 12.5301 14.3809 11.5601 15.0709C11.1301 15.3749 10.77 15.6229 10.5 15.8049C10.23 15.6229 9.86994 15.3749 9.43994 15.0709C8.46994 14.3809 7.19003 13.4099 5.91003 12.2779C4.63003 11.1429 3.37995 9.86995 2.44995 8.57995C1.51995 7.27095 1 6.05892 1 5.02392C1 2.87292 2.36003 1.54394 4.16003 1.13494C6.00003 0.716944 8.23999 1.29791 9.73999 3.05291Z" stroke="#373737" stroke-width="2"/>
+          </svg>
+        </div>
+        <div fxFlex="10">
+        </div>
+        <div class="shareBtn" fxFlex="45">
+          <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.80005 12.2993C5.34645 12.2993 6.59998 11.0457 6.59998 9.49927C6.59998 7.95287 5.34645 6.69922 3.80005 6.69922C2.25365 6.69922 1 7.95287 1 9.49927C1 11.0457 2.25365 12.2993 3.80005 12.2993Z" stroke="#373737" stroke-width="2"/>
+            <path d="M15.1984 6.59998C16.7448 6.59998 17.9984 5.34639 17.9984 3.79999C17.9984 2.25359 16.7448 1 15.1984 1C13.652 1 12.3984 2.25359 12.3984 3.79999C12.3984 5.34639 13.652 6.59998 15.1984 6.59998Z" stroke="#373737" stroke-width="2"/>
+            <path d="M15.1984 17.9999C16.7448 17.9999 17.9984 16.7463 17.9984 15.1999C17.9984 13.6535 16.7448 12.3999 15.1984 12.3999C13.652 12.3999 12.3984 13.6535 12.3984 15.1999C12.3984 16.7463 13.652 17.9999 15.1984 17.9999Z" stroke="#373737" stroke-width="2"/>
+            <path d="M6.64844 7.6001L11.8784 5.2251M6.64844 11.4001L11.8784 13.7751L6.64844 11.4001Z" stroke="#373737" stroke-width="2"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

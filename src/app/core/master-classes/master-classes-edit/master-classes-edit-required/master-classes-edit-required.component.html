@@ -1,0 +1,14 @@
+<div class="required">
+  <p class="heading">Required</p>
+  <div class="requiredHeader" *ngIf="masterClassArray">
+    <mat-card *ngFor="let f of masterClassArray.kitchenAccessories" style="background-color: white; box-shadow: none!important;color: black">
+      <div class="requiredDiv">
+        <img class="imageStyle" mat-card-image src="{{f.imageURL}}" >
+        <mat-card-content style="text-align: center">
+        <p>{{f.id}}</p>
+        </mat-card-content>
+      </div>
+
+    </mat-card>
+  </div>
+</div>

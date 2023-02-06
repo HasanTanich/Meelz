@@ -1,0 +1,470 @@
+* {
+    font-family: Averta-Regular;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-family: Averta-Regular;
+}
+
+.Masterclasses {
+    padding: 72px 0 120px 0;
+}
+
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.like-icon-box {
+    display: flex;
+}
+
+.thumb-up {
+    margin-left: 1em;
+    margin-top: auto;
+}
+
+.number-of-likes {
+    margin-right: 1em;
+    padding-top: 0.2em;
+    vertical-align: auto;
+}
+
+.like-icon {
+    height: 30px;
+    width: 4.5em;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    border-radius: 7px;
+}
+
+.cards {
+    margin-top: 1em;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 3%;
+}
+
+.chef-content {
+    padding: 0 20px 20px 20px;
+}
+
+.chef-content p {
+    margin-top: 8px;
+}
+
+.mat-card-content {
+    margin-top: 20px;
+}
+
+.cards-master {
+    margin-top: 3em;
+    width: 100%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    row-gap: 40px;
+}
+
+.cards-master .like {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.cards-master .like:active, .cards.like:focus {
+    transform: scale(1.4);
+}
+
+.visible {
+    visibility: hidden;
+}
+
+.red-heart-icon {
+    fill: #d0312D !important;
+    animation-delay: .3s;
+    animation: love 2s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.example-card-master {
+    /* This section calls the slideInFromLeft animation we defined above */
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+    background: #333;
+    padding: 30px;
+}
+
+.example-card-master {
+    /* height: 457px;
+     */
+    height: 55vh;
+    width: 30%;
+    max-width: 35%;
+    padding: 3em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em !important;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+}
+
+.example-card {
+    max-width: 22.7%;
+    height: auto;
+    background-color: white;
+    color: black;
+    font-family: Averta-Regular;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-radius: 1em;
+    border: 0;
+    box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-text {
+    font-family: Averta-Regular;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin: 0%;
+}
+
+.mat-card-image:first-child {
+    margin-top: 0;
+}
+
+.chef-image {
+    height: 289px;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+.mat-card-image {
+    margin: 0;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.mat-card {
+    padding: 0;
+}
+
+.card-title {
+    font-family: Averta-Regular;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+.dashboard-chef {
+    font-family: Averta-Regular;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 110%;
+    letter-spacing: -0.5px;
+}
+
+.action-likes {
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-likes-numb-like {
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.action-likes-like {
+    padding: 1em;
+}
+
+.bottom-of-card {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.b-o-c-price-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-name {
+    text-align: left;
+    font-family: Averta-Regular;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.top-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.b-o-c-price {
+    align-self: flex-end;
+}
+
+.b-o-c-price .one {
+    font-family: Averta-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: darkgrey;
+}
+
+.b-o-c-price .two {
+    font-family: Averta-Regular;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    font-weight: 700;
+}
+
+.b-o-c-action {
+    padding-top: 1.2em;
+}
+
+@media only screen and (max-width: 1200px) {
+    .box-1 h1 {
+        font-size: 80px;
+    }
+    .box-1 p {
+        font-size: 22px;
+        max-width: 400px;
+        line-height: 30px;
+    }
+    .box-2 img {
+        width: 90%;
+        height: 90%;
+    }
+    .bottom-of-card .meal-name {
+        font-size: 1.3em;
+    }
+    .b-o-c-price .one, .b-o-c-price .two {
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .container {
+        flex-direction: column;
+        padding: 0 90px;
+    }
+    .box-1 h1 {
+        font-size: 60px;
+    }
+    .box-1 p {
+        font-size: 20px;
+        max-width: 700px;
+    }
+    .box-2 img {
+        width: 65%;
+        height: 65%;
+        padding-left: 3rem;
+    }
+    .example-card {
+        min-width: 29%;
+        height: auto;
+    }
+    .example-card-master {
+        min-width: 45%;
+        height: 350px !important;
+        padding: 0.4em !important;
+    }
+    .bottom-of-card {
+        padding: 0.5em;
+    }
+    .bottom-of-card .meal-name {
+        font-size: 1em;
+    }
+    .b-o-c-price .one, .b-o-c-price .two {
+        font-size: 0.8em;
+    }
+    .card-title {
+        font-size: 16px;
+    }
+    .card-text {
+        font-size: 13px;
+    }
+    .mat-toolbar {
+        padding: 40px 80px;
+    }
+    .Masterclasses {
+        padding: 3em 0;
+    }
+    .elm img:first-child {
+        width: 20px;
+        height: 30px;
+    }
+    .cards {
+        row-gap: 40px;
+        column-gap: 6%;
+    }
+    .cards-master {
+        row-gap: 40px;
+        column-gap: 6%;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        flex-direction: column;
+    }
+    .box-1 h1 {
+        font-size: 50px;
+    }
+    .box-1 p {
+        font-size: 18px;
+        max-width: 350px;
+    }
+    .box-2 img {
+        width: 50%;
+        height: 50%;
+    }
+    .example-card {
+        min-width: 45%;
+        height: auto;
+    }
+    .example-card-master {
+        width: 200px;
+        height: 300px;
+        padding: 0.3em !important;
+    }
+    .bottom-of-card {
+        padding: 0.3em;
+    }
+    .bottom-of-card .meal-name {
+        font-size: 0.8em;
+    }
+    .b-o-c-price .one, .b-o-c-price .two {
+        font-size: 0.8em;
+    }
+    .card-title {
+        font-size: 10px;
+    }
+    .card-text {
+        font-size: 8px;
+    }
+    .mat-toolbar {
+        padding: 20px 50px;
+    }
+    .Masterclasses {
+        padding: 1em 0;
+    }
+    .mat-card-content {
+        margin-top: 8px;
+    }
+    .cards .like {
+        right: 10px;
+        top: 10px;
+    }
+    .header p {
+        font-size: 22px;
+    }
+    .cards, .cards-master {
+        column-gap: 5%;
+        row-gap: 25px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .example-card-master {
+        min-width: 100%;
+        /* height: 100%; */
+        padding: 0.3em !important;
+    }
+    .cards-master {
+        row-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .example-card {
+        min-width: 90%;
+        height: auto;
+    }
+    .example-card-master {
+        min-width: 90%;
+        padding: 0.3em !important;
+    }
+    .cards, .cards-master {
+        row-gap: 20px;
+    }
+}
+
+@keyframes love {
+    0% {
+
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    20% {
+        transform:translate(-15px,-10px) rotate(25deg); 
+         
+      opacity: .8;
+    }
+    40% {
+        transform: translate(15px,-20px) rotate(-25deg);
+        opacity: .6;
+    }
+    60% {
+        transform:translate(-15px,-30px) rotate(45deg);
+      opacity: .4;
+    }
+    80% {
+        transform: translate(15px,-40px) rotate(-45deg);
+        opacity: .2;
+    }
+    100% {
+      transform:translate(-15px,-50px) rotate(45deg);
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,156 @@
+.breadcrumbs {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  height: 20px;
+}
+.chefImg {
+  border-radius: 50%;
+  height: 7vh;
+  width: 7vh;
+}
+.breadcrumbs_item {
+  display: inline-block;
+  color: #999999;
+}
+
+.breadcrumbs_item:not(:last-of-type)::after {
+  content: "/";
+  margin: 0 5px;
+  color: #cccccc;
+}
+
+.breadcrumbs_link {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs_link:hover {
+  text-decoration: underline;
+}
+.chef {
+  padding-left: 4%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.chef-desc {
+  padding-left: 2%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.chef-desc p {
+  height: 10px;
+}
+.mat-divider {
+  margin-top: -0.1%;
+  margin-bottom: 1%;
+  border-top-color: rgba(0, 0, 0, 0.12);
+  width: 100%;
+}
+
+.mat-tab-label,
+.mat-tab-link {
+  color: black !important;
+}
+.activeLink:before {
+  display: flex;
+  justify-content: space-between !important;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  height: 1px;
+  width: 20%;
+  /* or 100px */
+  border-bottom: 3px solid #ffd600;
+}
+.tabGroupDiv a {
+  display: block;
+  text-align: left;
+  padding: 0 0 0 0 !important;
+}
+
+.container {
+  padding: 0px 130px 0 130px;
+}
+.tabMenu {
+  padding: 0 0 0 4%;
+}
+:host ::ng-deep .mat-tab-links {
+  justify-content: space-between;
+}
+.mat-tab-link {
+  min-width: 33% !important;
+  padding: 0 !important;
+  justify-content: space-between !important;
+  height: 27px !important;
+}
+.menuMain {
+  display: flex;
+  flex-direction: row;
+}
+.leftSide {
+  width: 50%;
+}
+.rightSide {
+  width: 50%;
+}
+.matDivider {
+  margin-left: 4%;
+  margin-top: 4%;
+  width: 96%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .container {
+    padding: 0px 100px 0 100px;
+  }
+}
+
+@media only screen and (max-width: 1050px) {
+  .container {
+    padding: 0px 80px 0 80px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .container {
+    padding: 0px 65px 0 65px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .menuMain {
+    padding: 7% 0 0 0;
+    flex-direction: column;
+  }
+  .breadcrumbs {
+    font-size: 11px;
+  }
+  .leftSide {
+    width: 100%;
+  }
+  .rightSide {
+    width: 100%;
+  }
+  .chef-desc {
+    font-size: 10px;
+  }
+  .matDivider {
+    margin-left: 0;
+    width: 100%;
+  }
+  .chef {
+    padding-left: 0;
+  }
+  .tabMenu {
+    padding: 0 0 0 0;
+  }
+}

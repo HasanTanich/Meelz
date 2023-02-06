@@ -1,0 +1,21 @@
+<div class="container">
+  <app-header></app-header>
+</div>
+<img [src]="'./assets/img/img.png'" alt="menu" class="chefScreenImage">
+<app-chef-details-header [id]="id"></app-chef-details-header>
+
+<div class="tabMenu">
+  <nav mat-tab-nav-bar class="tabGroupDiv">
+    <a class="textAlignLeft" mat-tab-link routerLink="meelz" routerLinkActive="activeLink"><span>MEELZ</span></a>
+    <a class="textAlignLeft" mat-tab-link routerLink="recipe" routerLinkActive="activeLink">RECIPE</a>
+    <a class="textAlignLeft" mat-tab-link routerLink="chefstore" routerLinkActive="activeLink">CHEF STORE</a>
+    <a class="textAlignLeft" mat-tab-link routerLink="masterclasses" routerLinkActive="activeLink">MASTER CLASSES</a>
+    <a class="textAlignLeft" mat-tab-link routerLink="cheftable" routerLinkActive="activeLink">CHEF TABLE</a>
+    <a class="textAlignLeft" mat-tab-link routerLink="blogposts" routerLinkActive="activeLink">BLOG POSTS</a>
+  </nav>
+  <div class="tabGroupDiv2">
+    <mat-divider></mat-divider>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<app-footer></app-footer>

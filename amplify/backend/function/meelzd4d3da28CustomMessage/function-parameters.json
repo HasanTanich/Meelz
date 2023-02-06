@@ -1,0 +1,26 @@
+{
+  "trigger": true,
+  "modules": [
+    "verification-link"
+  ],
+  "parentResource": "meelzd4d3da28",
+  "functionName": "meelzd4d3da28CustomMessage",
+  "resourceName": "meelzd4d3da28CustomMessage",
+  "parentStack": "auth",
+  "triggerEnvs": [
+    {
+      "key": "RESOURCENAME",
+      "value": "resourceName"
+    }
+  ],
+  "triggerDir": "C:\\Users\\setae\\AppData\\Roaming\\npm\\node_modules\\@aws-amplify\\cli\\node_modules\\amplify-category-auth\\provider-utils\\awscloudformation\\triggers\\CustomMessage",
+  "triggerTemplate": "CustomMessage.json.ejs",
+  "triggerEventPath": "CustomMessage.event.json",
+  "roleName": "meelzd4d3da28CustomMessage",
+  "skipEdit": true,
+  "REDIRECTURL": "https://meelz.auth.us-east-1.amazoncognito.com/oauth2/idpresponse",
+  "EMAILSUBJECT": "Email verification for Meelz",
+  "EMAILMESSAGE": "Please click on this link to confirm your account",
+  "RESOURCENAME": "resourceName",
+  "enableCors": false
+}

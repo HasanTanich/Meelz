@@ -1,0 +1,7 @@
+<app-filters-tab (reverseRating)="onChefMasterClasseszSortRating($event)"
+    (reversePrice)="onChefMasterClasseszSortPrice($event)" [Rating]="'Rating'" [Price]="'Price'" [chefDetails]="true">
+</app-filters-tab>
+<mat-spinner *ngIf="!loaded" color='accent' style="margin-left: auto; margin-right: auto"></mat-spinner>
+<app-card-three  *ngIf="allChefsDataArray && allChefsDataArray.length > 0"  [data]="allChefsDataArray" [masterClassScreen]="true" [cardPrice]="true" [cardDesc]="true" [cardLevel]="false" [cardBtn]="true"
+    [reverseRating]="chefMasterClassesRating" [reversePrice]="chefMasterClassesPrice">
+</app-card-three>

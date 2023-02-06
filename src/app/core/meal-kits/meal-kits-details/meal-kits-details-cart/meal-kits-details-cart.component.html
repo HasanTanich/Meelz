@@ -1,0 +1,45 @@
+<div class="cart">
+  <div class="cartInfo">
+    <span class="cloud">Supplier:</span>
+    <!--    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"-->
+    <img *ngIf="menuDataArray" class="supplierImg" src="{{menuDataArray.supplier.imageUrl}}">
+    <span *ngIf="menuDataArray">{{menuDataArray.supplier.supplierName}}</span>
+  </div>
+  <div style="padding-top: 2%">
+    <!--    not responsive-->
+    <!--    not responsive-->
+    <div class="cartShare">
+      <button class="datesBtn">
+        <span *ngIf="menuDataArray" class="total-AED"> Total AED {{menuDataArray.mealKitInfo.totalPrice}} </span>
+        <span class="vl"></span>
+        <button  style="background-color: transparent;border: 0px;cursor: pointer;" (click)="addToCart()">
+          <b class="add-to-cart">Add to cart</b>
+          </button>
+      </button>
+      <div class="cartShare likeShareSize">
+        <div class="likeBtn">
+          <svg viewBox="0 0 21 13" fill="none" xmlns="http://www.w3.org/2000/svg" class="like-icon">
+            <path
+              d="M9.73999 3.05291L10.5 3.94091L11.26 3.05694C12.78 1.28894 15.02 0.711939 16.86 1.12994C18.65 1.53894 20 2.86792 20 5.02392C20 6.05892 19.48 7.27095 18.55 8.57995C17.62 9.86995 16.37 11.1429 15.09 12.2779C13.81 13.4099 12.5301 14.3809 11.5601 15.0709C11.1301 15.3749 10.77 15.6229 10.5 15.8049C10.23 15.6229 9.86994 15.3749 9.43994 15.0709C8.46994 14.3809 7.19003 13.4099 5.91003 12.2779C4.63003 11.1429 3.37995 9.86995 2.44995 8.57995C1.51995 7.27095 1 6.05892 1 5.02392C1 2.87292 2.36003 1.54394 4.16003 1.13494C6.00003 0.716944 8.23999 1.29791 9.73999 3.05291Z"
+              stroke="#373737" stroke-width="2" />
+          </svg>
+        </div>
+        <div class="shareBtn">
+          <svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg" class="share-icon">
+            <path
+              d="M3.80005 12.2993C5.34645 12.2993 6.59998 11.0457 6.59998 9.49927C6.59998 7.95287 5.34645 6.69922 3.80005 6.69922C2.25365 6.69922 1 7.95287 1 9.49927C1 11.0457 2.25365 12.2993 3.80005 12.2993Z"
+              stroke="#373737" stroke-width="2" />
+            <path
+              d="M15.1984 6.59998C16.7448 6.59998 17.9984 5.34639 17.9984 3.79999C17.9984 2.25359 16.7448 1 15.1984 1C13.652 1 12.3984 2.25359 12.3984 3.79999C12.3984 5.34639 13.652 6.59998 15.1984 6.59998Z"
+              stroke="#373737" stroke-width="2" />
+            <path
+              d="M15.1984 17.9999C16.7448 17.9999 17.9984 16.7463 17.9984 15.1999C17.9984 13.6535 16.7448 12.3999 15.1984 12.3999C13.652 12.3999 12.3984 13.6535 12.3984 15.1999C12.3984 16.7463 13.652 17.9999 15.1984 17.9999Z"
+              stroke="#373737" stroke-width="2" />
+            <path d="M6.64844 7.6001L11.8784 5.2251M6.64844 11.4001L11.8784 13.7751L6.64844 11.4001Z" stroke="#373737"
+                  stroke-width="2" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

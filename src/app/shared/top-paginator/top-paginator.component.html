@@ -1,0 +1,116 @@
+<div class="header-paginator">
+  <div class="header">
+    <p class="dashboard-title">{{title}}</p>
+  </div>
+  <div *ngIf="whiteBackground;else greyBackground">
+    <div class="paginator">
+      <div *ngIf="!onlySeeAll">
+
+      
+      <div class="paginator-Arrows">
+        <div class="paginator-arr-1" (click)="NextScreen()">
+          <div *ngIf="next; else elseBlock">
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="right-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" transform="rotate(180 21.5 21.5)" fill="#F5F5F5" />
+              <path d="M18 13L27 21.5L18 30" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <ng-template #elseBlock>
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="right-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" transform="rotate(180 21.5 21.5)" fill="white" />
+              <path d="M18 13L27 21.5L18 30" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </ng-template>
+        </div>
+        <div class="paginator-arr-2" (click)="PreviousScreen()">
+          <div *ngIf="!previous; else elseBlock1">
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="left-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" fill="white" />
+              <path d="M25 30L16 21.5L25 13" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <ng-template #elseBlock1>
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="left-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" fill="#F5F5F5" />
+              <path d="M25 30L16 21.5L25 13" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+      <class *ngIf="!onlySeeNone" class="paginator-seeAll">
+        <div routerLink="/{{urlRoute}}" class="see-all">
+          <svg viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow-icon">
+            <path d="M9.66667 1L14 5.5M14 5.5L9.66667 10M14 5.5H1" stroke="#1CBD8D" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <a> See all </a>
+        </div>
+      </class>
+    </div>
+  </div>
+  <ng-template #greyBackground>
+    <div class="paginator">
+      <div class="paginator-Arrows">
+        <div class="paginator-arr-1" (click)="NextScreen()">
+          <div *ngIf="!next; else elseBlock2">
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="right-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" transform="rotate(180 21.5 21.5)" fill="#F5F5F5" />
+              <path d="M18 13L27 21.5L18 30" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <ng-template #elseBlock2>
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="right-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" transform="rotate(180 21.5 21.5)" fill="white" />
+              <path d="M18 13L27 21.5L18 30" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </ng-template>
+        </div>
+        <div class="paginator-arr-2" (click)="PreviousScreen()">
+          <div *ngIf="previous; else elseBlock4">
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="left-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" fill="white" />
+              <path d="M25 30L16 21.5L25 13" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <ng-template #elseBlock4>
+            <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg"
+              class="left-arrow">
+              <circle cx="21.5" cy="21.5" r="21.5" fill="#F5F5F5" />
+              <path d="M25 30L16 21.5L25 13" stroke="#373737" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </ng-template>
+        </div>
+      </div>
+      <div class="paginator-seeAll">
+        <div routerLink="/{{urlRoute}}" class="see-all">
+          <svg width="15" height="11" viewBox="0 0 15 11" fill="none" xmlns="http://www.w3.org/2000/svg"
+            class="arrow-icon">
+            <path d="M9.66667 1L14 5.5M14 5.5L9.66667 10M14 5.5H1" stroke="#1CBD8D" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg><a> See all </a>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</div>
+<div style="display: none;" class="smallDiv">
+  <mat-paginator #paginator [(pageSize)]="pageSize">
+  </mat-paginator>
+</div>

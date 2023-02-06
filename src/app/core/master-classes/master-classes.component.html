@@ -1,0 +1,30 @@
+<div fxLayout="column" class="container">
+  <app-header></app-header>
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs_item">
+      <a routerLink="/home" class="breadcrumbs_link">Home</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <p>Master Classes</p>
+    </li>
+  </ul>
+  <h1 class="heading">Master Classes</h1>
+
+  <!-- search bar component -->
+  <app-search-bar (isActive)="onIsActive($event)" (isActive)="onIsActiveChanged($event)" [pageItems]="'Experiences'">
+  </app-search-bar>
+
+  <!-- filters tabs component -->
+  <app-filters-tab [Rating]="'Rating'" [Price]="'Price'" [Name]="'Name'" (reverseRating)="onSortRating($event)"
+    (reverseName)="onSortName($event)" [MasterClassesPage]="true">
+  </app-filters-tab>
+
+  <!-- list of master-classes -->
+  <app-card-two [cards]="masterClassObs" [dashboard]="false" [searchText]="searchText" [isActive]="isActive"
+    [reverseRating]="reverseRating" [reverseName]="reverseName" [reversePrice]="reversePrice"></app-card-two>
+
+  <!-- bottom paginator -->
+  <app-bottom-paginator (pressedKey)="GetPaginatedData($event)"></app-bottom-paginator>
+
+</div>
+<app-footer></app-footer>

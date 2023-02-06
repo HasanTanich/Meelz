@@ -1,0 +1,8 @@
+<app-filters-tab (reverseRating)="onChefRecipeSortRating($event)" (reversePrice)="onChefRecipeSortPrice($event)"
+    (reverseName)="onChefRecipeSortName($event)" [Rating]="'Rating'" [Price]="'Price'" [Name]="'Name'"
+    [RecipeView]="true" [chefDetails]="true">
+</app-filters-tab>
+<mat-spinner *ngIf="!loaded" color='accent' style="margin-left: auto; margin-right: auto"></mat-spinner>
+<app-card-three  *ngIf="allChefsDataArray && allChefsDataArray.length > 0" [data]="allChefsDataArray" [recipeScreen]="true" [cardPrice]="true" [cardDesc]="false" [cardLevel]="false" [cardBtn]="true"
+    [reverseRating]="chefRecipeRating" [reversePrice]="chefRecipePrice" [reverseName]="chefRecipeName">
+</app-card-three>

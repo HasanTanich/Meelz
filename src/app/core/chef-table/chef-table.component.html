@@ -1,0 +1,34 @@
+<div fxLayout="column" class="container">
+    <app-header></app-header>
+
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs_item">
+            <a routerLink="/home" class="breadcrumbs_link">Home</a>
+        </li>
+        <li class="breadcrumbs_item">
+            <p>Chef's Table</p>
+        </li>
+    </ul>
+
+    <h1 class="heading">Chef's Table</h1>
+
+    <app-search-bar (isActive)="onIsActive($event)" (isActive)="onIsActiveChanged($event)" [pageItems]="'chef tables'">
+    </app-search-bar>
+
+    <app-filters-tab [Rating]="'Rating'" [Price]="'Price'" [Family]="'Family'" [Chef]="'Chef'" [Seats]="'Seats'"
+        [Duration]="'Duration'" [chefTablePage]="true" (reverseRating)="onSortRating($event)"
+        (reversePrice)="onSortPrice($event)" (reverseDuration)="onSortDuration($event)"
+        (reverseSeats)="onSortSeats($event)">
+    </app-filters-tab>
+
+    <app-chef-table-card [cards]="allChefTable" [chefTablePage]="true" [searchText]="searchText" [isActive]="isActive"
+        [reverseRating]="reverseRating" [reverseDuration]="reverseDuration" [reverseSeats]="reverseSeats"
+        [reversePrice]="reversePrice" [urlRoute]="'chef-table'" [cardTitle]="'heading'" [cardImage]="'backgroundImg'"
+        [cardDescription]="'description'" [cardSeats]="'groupSize'">
+    </app-chef-table-card>
+
+    <app-bottom-paginator></app-bottom-paginator>
+
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+.paragraf{
+    display: flex;
+    justify-content: center;
+    color: rgb(33, 202, 61);
+    font-family: Averta-Regular;
+    font-size: larger;
+    margin-top: 0.9em;
+    background-color: white;
+}
+.paragraf1{
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-family: Averta-Regular;
+    font-size: larger;
+    margin-top: 0.9em;
+}

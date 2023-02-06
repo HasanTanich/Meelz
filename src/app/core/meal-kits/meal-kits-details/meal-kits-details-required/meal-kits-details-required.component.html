@@ -1,0 +1,12 @@
+<div *ngIf="mealKitArray" class="requiredHeader">
+  <div *ngFor="let f of mealKitArray.requiredRecipe" style="background-color: white; box-shadow: none!important;color: black">
+    <div class="requiredDiv" fxLayout="column">
+      <div class="itemDiv">
+        <img class="mealKitImg" mat-card-image src="{{f.imgUrl}}" >
+      </div>
+      <div style="text-align: center">
+        <p>{{f.title}}</p>
+      </div>
+    </div>
+  </div>
+</div>

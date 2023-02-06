@@ -1,0 +1,51 @@
+<div class="tabMenuButtons">
+  <button mat-stroked-button (click)="sortAll('style')" [ngClass]="[reverseAll ? 'button-active1' : 'button-standard1']"
+    class="allBtn">
+    All
+  </button>
+  <button mat-stroked-button (click)="sortSeafood()"
+    [ngClass]="[reverseSeafood ? 'button-active1' : 'button-standard']" class="ratingBtn1">
+    <svg width="24" height="18" viewBox="0 0 24 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M14.0211 0C13.9781 0 13.9371 0.00599121 13.8951 0.0159912L7.83512 1.55499C7.61312 1.60899 7.45711 1.80702 7.45511 2.03302C7.45511 2.26202 7.60711 2.461 7.82711 2.521C7.86411 2.531 8.29311 2.76399 8.52511 3.17999C8.75311 3.58799 8.88111 4.17602 8.54911 5.07202C8.20811 5.26602 7.87811 5.46299 7.57111 5.66199C6.35411 6.44899 5.61111 7.09201 5.19011 7.47101C4.76911 6.73801 3.45011 4.65002 0.830114 4.65002C0.653114 4.65002 0.396105 4.67601 0.193106 4.97101C0.0911055 5.11901 0.0541082 5.318 0.0771082 5.492C0.101108 5.664 0.16612 5.81599 0.26412 5.97699C0.70512 6.71299 1.49511 8.20502 1.49511 9.40002C1.49511 10.59 0.665106 12.438 0.193106 13.086C0.0261055 13.312 -0.0738863 13.635 0.0671137 13.936C0.207114 14.236 0.537117 14.371 0.811117 14.371C2.72812 14.371 3.97511 13.449 4.67911 12.545C4.98311 12.154 5.16211 11.785 5.30611 11.463C6.24411 12.303 8.52711 14.115 11.5021 14.814C11.7601 15.312 11.6791 15.855 11.5531 16.379C11.4861 16.66 11.4001 16.904 11.3921 17.207C11.3881 17.359 11.4081 17.566 11.5671 17.75C11.7261 17.936 11.9721 18 12.1611 18H14.0151C14.1081 18 14.1981 17.975 14.2771 17.928C14.2281 17.957 14.4791 17.834 14.7391 17.695C15.0001 17.557 15.3291 17.359 15.6591 17.092C16.2531 16.609 16.8631 15.867 17.0401 14.844C20.2451 14.285 22.2701 12.859 23.5291 11.014C23.7021 10.758 23.9041 10.469 23.9771 10.074C24.0481 9.67997 23.9551 9.22998 23.6881 8.75598C23.3301 8.11498 22.5591 6.76999 21.0311 5.60199C20.2171 4.97999 19.1751 4.41401 17.8811 4.01801C17.6711 3.19301 16.7961 0.54101 14.1191 0.0100098C14.0861 0.00400977 14.0531 0 14.0211 0ZM13.9901 1.02301C15.6081 1.38701 16.3851 2.832 16.7251 3.729C15.8701 3.559 14.9321 3.45099 13.8781 3.45099C12.4171 3.45099 10.9951 3.88098 9.72312 4.46698C9.80112 3.75798 9.66012 3.15201 9.40612 2.69501C9.30612 2.51601 9.18011 2.41001 9.06611 2.27301L13.9901 1.02301ZM13.8781 4.45099C17.0161 4.45099 19.0551 5.355 20.4181 6.396C21.7811 7.436 22.4571 8.61299 22.8071 9.23999C22.8091 9.23999 22.8091 9.23999 22.8091 9.23999C23.0021 9.58599 23.0121 9.75202 22.9861 9.89502C22.9581 10.037 22.8621 10.205 22.6951 10.453C21.2461 12.58 18.7721 14.1 13.8781 14.1C9.31512 14.1 5.47111 10.258 5.47111 10.258C5.34311 10.127 5.15511 10.076 4.97811 10.125C4.80111 10.174 4.66511 10.312 4.62211 10.49C4.62211 10.49 4.44912 11.205 3.88212 11.932C3.36512 12.598 2.54112 13.219 1.18812 13.328C1.79612 12.389 2.50211 10.846 2.50211 9.40002C2.50211 7.95102 1.77611 6.60699 1.29111 5.77899C3.34011 6.12699 4.66311 8.43597 4.66311 8.43597C4.73611 8.57797 4.87112 8.678 5.03112 8.703C5.18812 8.729 5.34911 8.67798 5.46311 8.56598C5.46311 8.56598 6.52311 7.535 8.12211 6.5C9.72111 5.463 11.8441 4.45099 13.8781 4.45099ZM18.5521 8C17.9951 8 17.5451 8.449 17.5451 9C17.5451 9.553 17.9951 10 18.5521 10C19.1081 10 19.5591 9.553 19.5591 9C19.5591 8.449 19.1081 8 18.5521 8ZM15.9761 14.99C15.7971 15.564 15.4251 15.988 15.0221 16.316C14.7591 16.531 14.4851 16.695 14.2631 16.814C14.1021 16.9 14.0071 16.945 13.8971 17H12.4481C12.4721 16.885 12.4851 16.805 12.5331 16.609C12.6331 16.189 12.7391 15.615 12.6231 15.016C13.0321 15.066 13.4491 15.1 13.8781 15.1C14.6251 15.1 15.3191 15.059 15.9761 14.99Z"
+        fill="#1CBD8D" />
+    </svg>
+    Seafood
+  </button>
+  <button mat-stroked-button (click)="sortMeat('style')"
+    [ngClass]="[reverseMeat ? 'button-active1' : 'button-standard']" class="meatBtn">
+    Meat
+  </button>
+  <button mat-stroked-button (click)="sortGroceries('style')"
+    [ngClass]="[reverseGroceries ? 'button-active1' : 'button-standard']" class="groceriesBtn">
+    Groceries
+  </button>
+  <button mat-stroked-button (click)="sortChocolate('Chocolate')"
+    [ngClass]="[reverseChocolate ? 'button-active1' : 'button-standard']" class="chocolateBtn">
+    Chocolate
+  </button>
+  <button mat-stroked-button (click)="sortTableware('style')"
+    [ngClass]="[reverseTableware ? 'button-active1' : 'button-standard']" class="tablewareBtn">
+    Tableware
+  </button>
+  <button mat-stroked-button (click)="sortKitchen('style')"
+    [ngClass]="[reverseKitchen ? 'button-active1' : 'button-standard']" class="kitchenBtn">
+    Kitchen
+  </button>
+  <button mat-stroked-button (click)="sortSauces('style')"
+    [ngClass]="[reverseSauces ? 'button-active1' : 'button-standard']" class="saucesBtn">
+    Sauces
+  </button>
+  <button mat-stroked-button (click)="sortVegi('style')"
+    [ngClass]="[reverseVegi ? 'button-active1' : 'button-standard']" class="vegiBtn">
+    Vegi
+  </button>
+</div>
+
+<app-filters-tab (reverseRating)="onChefStoreSortRating($event)" (reversePrice)="onChefStoreSortPrice($event)"
+  [Rating]="'Rating'" [Price]="'Price'" [chefDetails]="true">
+</app-filters-tab>
+<mat-spinner *ngIf="!loaded" color='accent' style="margin-left: auto; margin-right: auto"></mat-spinner>
+<app-card-three *ngIf="allChefsDataArray && allChefsDataArray.length > 0" [data]="allChefsDataArray" [chefStoreScreen]="true" [cardPrice]="true" [cardDesc]="true" [cardLevel]="false" [cardBtn]="true"
+  [reverseRating]="chefStoreRating" [reversePrice]="chefStorePrice">
+</app-card-three>

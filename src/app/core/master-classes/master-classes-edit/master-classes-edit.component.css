@@ -1,0 +1,52 @@
+.headerDiv {
+  width: 70%;
+}
+.datesDiv {
+  width: 30%;
+}
+
+.leftSide {
+  display: flex;
+  flex-direction: row;
+
+}
+.rightSide {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+    padding: 0px 130px 0 130px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        padding: 0px 100px 0 100px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        padding: 0px 80px 0 80px;
+    }
+    .headerDiv {
+      width: 100%;
+    }
+    .datesDiv {
+      width: 100%;
+    }
+  .rightSide {
+      width: 100%;
+    }
+    .leftSide {
+      flex-direction: column;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0px 65px 0 65px;
+    }
+}

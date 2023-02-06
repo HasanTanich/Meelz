@@ -1,0 +1,51 @@
+
+.heading {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-family: Averta-Regular;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  margin-left: -2px!important;
+}
+.ulMenu {
+  margin-left: 1.5%!important;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+.ulMenu li {
+  padding-bottom: 2%;
+  color: #373737;
+}
+.menuParagraph {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  margin-left: -2px!important;
+  color: #373737;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .ulMenu {
+    padding-left: 2%;
+    font-size: 11px;
+  }
+  .menuParagraph {
+    font-size: 11px;
+  }
+  .imgChef {
+    width: 9vh;
+    height: 9vh;
+  }
+}

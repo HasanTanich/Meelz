@@ -1,0 +1,148 @@
+.tabMenuButtons {
+  display: flex;
+  justify-content: start;
+  padding-right: 10%;
+  align-items: center;
+
+  margin-bottom: 2%;
+}
+
+.button-active {
+  background-color: #FFDF36;
+}
+
+.button-active1 {
+  background-color: #1CBD8D;
+  color: white!important;
+}
+
+.button-standard {
+  background-color: transparent;
+}
+
+.button-standard1 {
+  background-color: transparent;
+  color: #1CBD8D;
+}
+
+.groceriesBtn {
+  border: 1px solid #1CBD8D;
+  width: 132px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.chocolateBtn {
+  border: 1px solid #1CBD8D;
+  width: 134px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.tablewareBtn {
+  border: 1px solid #1CBD8D;
+  width: 136px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.kitchenBtn {
+  border: 1px solid #1CBD8D;
+  width: 119px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.saucesBtn {
+  border: 1px solid #1CBD8D;
+  width: 115px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.vegiBtn {
+  border: 1px solid #1CBD8D;
+  width: 115px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.meatBtn {
+  border: 1px solid #1CBD8D;
+  width: 101px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+.allBtn {
+  border: 1px solid #1CBD8D;
+  width: 61px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-right: 5px;
+}
+
+.ratingBtn1 {
+  border: 1px solid #1CBD8D;
+  width: 124px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-left: 10px;
+  margin-right: 5px;
+  color: #1CBD8D;
+}
+
+@media only screen and (max-width: 768px) {
+  .tabMenuButtons {
+    flex-flow: column wrap;
+    max-height: 25vh;
+    gap: 2%;
+  }
+
+  .allBtn {
+    width: 40%;
+    margin-left: 10px;
+  }
+  .meatBtn {
+    width: 40%;
+  }
+  .vegiBtn {
+    width: 40%;
+  }
+  .saucesBtn {
+    width: 40%;
+  }
+  .kitchenBtn {
+    width: 40%;
+  }
+  .tablewareBtn {
+    width: 40%;
+  }
+  .chocolateBtn {
+    width: 40%;
+  }
+  .groceriesBtn {
+    width: 40%;
+  }
+}

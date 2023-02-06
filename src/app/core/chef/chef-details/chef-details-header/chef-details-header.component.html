@@ -1,0 +1,67 @@
+<div class="headingDiv">
+  <img src="{{chefHeaderData?.imageURL}}" alt="menu" class="chef-profile-image">
+  <div class="headingDetailsDiv">
+    <div class="headingDetailsDivChef">
+      <div>
+        <p class="headingDivTitle"><b>{{chefHeaderData?.chefName}}</b></p>
+      </div>
+      <div>
+        <button mat-stroked-button>
+          <mat-icon>favorite_border</mat-icon>
+        </button>
+        <button mat-stroked-button>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">share</mat-icon>
+        </button>
+      </div>
+    </div>
+    <p class="headingDivDesc">{{chefHeaderData?.jobRole}} at {{chefHeaderData?.workingExperience.companyName}}</p>
+    <div class="restaurantIcons">
+      <div style="margin-left: 13px"></div>
+<!--      <ng-container *ngFor="let j of (chefHeaderData | async).workingExperience; let i = index">-->
+        <img src="{{chefHeaderData?.workingExperience.photo}}" alt="{{chefHeaderData?.workingExperience.companyName}}"
+          style="height: 25px; width: 25px; border-radius: 50%; margin-left: -13px">
+<!--      </ng-container>-->
+      <p class="restaurantIconsDesc">
+        Worked before in 1 restaurant
+      </p>
+    </div>
+    <div class="socialIcons">
+<!--      <a href="{{chefHeaderData?.socialMedia.facebookURL}}">-->
+        <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M22.215 11.107C22.215 4.97299 17.242 0 11.107 0C4.97299 0 0 4.97299 0 11.107C0 16.651 4.06201 21.247 9.37201 22.08V14.318H6.552V11.107H9.37201V8.65997C9.37201 5.87597 11.03 4.33899 13.567 4.33899C14.783 4.33899 16.054 4.55603 16.054 4.55603V7.289H14.653C13.273 7.289 12.843 8.14499 12.843 9.02399V11.107H15.923L15.431 14.318H12.843V22.08C18.153 21.247 22.215 16.651 22.215 11.107Z"
+            fill="#373737" />
+        </svg>
+<!--      </a>-->
+<!--      <a href="{{chefHeaderData.socialMedia.instagramURL}}">-->
+        <svg style="margin-left: 20px" width="22" height="22" viewBox="0 0 22 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.41498 0C2.87698 0 0 2.88003 0 6.41803V15.585C0 19.123 2.88003 22 6.41803 22H15.585C19.123 22 22 19.12 22 15.582V6.41498C22 2.87698 19.12 0 15.582 0H6.41498ZM17.417 3.66699C17.923 3.66699 18.333 4.07701 18.333 4.58301C18.333 5.08901 17.923 5.5 17.417 5.5C16.911 5.5 16.5 5.08901 16.5 4.58301C16.5 4.07701 16.911 3.66699 17.417 3.66699ZM11 5.5C14.033 5.5 16.5 7.967 16.5 11C16.5 14.033 14.033 16.5 11 16.5C7.967 16.5 5.5 14.033 5.5 11C5.5 7.967 7.967 5.5 11 5.5ZM11 7.33301C10.028 7.33301 9.09498 7.71998 8.40698 8.40698C7.71998 9.09498 7.33301 10.028 7.33301 11C7.33301 11.972 7.71998 12.905 8.40698 13.593C9.09498 14.28 10.028 14.667 11 14.667C11.972 14.667 12.905 14.28 13.593 13.593C14.28 12.905 14.667 11.972 14.667 11C14.667 10.028 14.28 9.09498 13.593 8.40698C12.905 7.71998 11.972 7.33301 11 7.33301Z"
+            fill="#373737" />
+        </svg>
+<!--      </a>-->
+<!--      <a href="{{chefHeaderData.socialMedia.youtubeURL}}">-->
+
+        <svg style="margin-left: 20px" width="24" height="20" viewBox="0 0 24 20" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M12 0C8.136 0 3.12097 0.953003 3.12097 0.953003L3.10797 0.968018C1.34797 1.24502 0 2.73398 0 4.54498V9.99902V10.001V15.453V15.455C0.002 16.32 0.316 17.156 0.888 17.813C1.459 18.47 2.25 18.905 3.117 19.04L3.12097 19.045C3.12097 19.045 8.136 20 12 20C15.864 20 20.879 19.045 20.879 19.045L20.881 19.043C21.75 18.909 22.541 18.473 23.113 17.816C23.684 17.158 23.999 16.321 24 15.455V15.453V10.001V9.99902V4.54498C23.999 3.67998 23.684 2.84297 23.113 2.18597C22.541 1.52897 21.751 1.09298 20.883 0.958984L20.879 0.953003C20.879 0.953003 15.864 0 12 0ZM9.23102 5.81598L16.615 9.99902L9.23102 14.182V5.81598Z"
+            fill="#373737" />
+        </svg>
+<!--      </a>-->
+<!--      <a href="{{chefHeaderData.socialMedia.pinterestURL}}">-->
+
+        <svg style="margin-left: 20px; padding-top: 0.5%" width="22" height="22" viewBox="0 0 22 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 0C4.925 0 0 4.925 0 11C0 17.075 4.925 22 11 22C17.075 22 22 17.075 22 11C22 4.925 17.075 0 11 0ZM12.266 14.654C11.248 14.654 10.291 14.104 9.96399 13.479C9.96399 13.479 9.41603 15.65 9.30103 16.069C8.89303 17.55 7.69298 19.031 7.59998 19.152C7.53398 19.237 7.39098 19.21 7.37598 19.098C7.34998 18.91 7.04399 17.041 7.40399 15.518C7.58499 14.752 8.61603 10.383 8.61603 10.383C8.61603 10.383 8.31598 9.78203 8.31598 8.89203C8.31598 7.49603 9.125 6.453 10.133 6.453C10.99 6.453 11.403 7.09598 11.403 7.86798C11.403 8.72898 10.855 10.018 10.572 11.211C10.336 12.211 11.073 13.026 12.059 13.026C13.844 13.026 15.046 10.733 15.046 8.01599C15.046 5.95099 13.656 4.40503 11.126 4.40503C8.26798 4.40503 6.48602 6.53703 6.48602 8.91803C6.48602 9.73903 6.72897 10.318 7.10797 10.766C7.28197 10.972 7.30698 11.055 7.24298 11.291C7.19798 11.465 7.09503 11.882 7.05103 12.047C6.98803 12.286 6.79498 12.371 6.57898 12.283C5.26298 11.746 4.65002 10.304 4.65002 8.68298C4.65002 6.00698 6.90697 2.797 11.384 2.797C14.982 2.797 17.35 5.40001 17.35 8.19501C17.35 11.892 15.294 14.654 12.266 14.654Z"
+            fill="#373737" />
+        </svg>
+<!--      </a>-->
+    </div>
+    <div class="descriptionDiv">
+      <p>{{chefHeaderData?.description}}</p>
+    </div>
+  </div>
+</div>

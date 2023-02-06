@@ -1,0 +1,51 @@
+.info {
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-left: 5px solid #FFDF36;
+  border-radius: 16px;
+  padding: 2% 0 2% 3%;
+}
+.ulInfo {
+  margin-left: 1.5%!important;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #373737;
+}
+.menuParagraph {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  color: #373737;
+}
+.ulInfo li {
+  padding-bottom: 2%;
+  color: #373737;
+}
+
+.experienceDiv {
+  padding-top: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .heading {
+    font-size: 20px;
+  }
+  .ulInfo {
+    padding-left: 4%;
+    font-size: 11px;
+  }
+  .menuParagraph {
+    font-size: 13px;
+  }
+  .imgChef {
+    width: 9vh;
+    height: 9vh;
+  }
+}

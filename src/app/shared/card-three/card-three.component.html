@@ -1,0 +1,108 @@
+<div class="chef-Meelz">
+  <mat-card class="chef-card-meelz"
+    *ngFor="let n of data | slice: start : end | orderByNumerical: 'likes' : reverseRating; let i = index">
+    <div>
+      <img *ngIf="meelzScreen"  class="imgStyle" mat-card-image
+        [src]="n.menu.imageUrl[0]" alt="{{n.menu.heading}}">
+      <img *ngIf="recipeScreen"  class="imgStyle" mat-card-image
+        [src]="n.imageURL[0]" alt="{{n.mealKitInfo.heading}}">
+      <img *ngIf="chefTableScreen" class="imgStyle" mat-card-image
+        [src]="n.backgroundImg" alt="{{n.chefTableInfo.heading}}">
+      <img *ngIf="masterClassScreen" class="imgStyle" mat-card-image
+        [src]="n.masterClass.background" alt="{{n.masterClass.description}}">
+      <img *ngIf="blogScreen" class="imgStyle" mat-card-image
+        [src]="n.blog.background" alt="{{n.blog.heading}}">
+      <img *ngIf="chefStoreScreen" class="imgStyle" mat-card-image
+        [src]="n.chefsStore.background" alt="{{n.chefsStore.heading}}">
+      <svg width="30" height="25" viewBox="0 0 30 25" fill="none" xmlns="http://www.w3.org/2000/svg" class="heart-icon"
+        (click)="likePost(i)" [ngClass]="[ n.liked ? 'red-heart-icon' : '']">
+
+        <g filter="url(#filter0_b)">
+          <path
+            d="M30 7.38813C30 15.2911 15 25 15 25C15 25 0 15.2911 0 7.38813C0 -0.514862 10 -2.5 15 3.53554C20.0695 -2.51854 30 -0.514862 30 7.38813Z"
+            fill="black" fill-opacity="0.15" />
+          <path
+            d="M14.2299 4.17349L14.9959 5.09808L15.7667 4.17755C18.0548 1.44504 21.4176 0.554327 24.1724 1.20144C26.8837 1.83832 29 3.94729 29 7.38813C29 9.06457 28.1947 10.9488 26.8353 12.903C25.4883 14.8394 23.6728 16.7371 21.8267 18.4183C19.9851 20.0955 18.1392 21.5337 16.7515 22.5538C16.0584 23.0632 15.4817 23.4669 15.0795 23.7423C15.0522 23.761 15.0257 23.7791 15 23.7967C14.9743 23.7791 14.9478 23.761 14.9205 23.7423C14.5183 23.4669 13.9416 23.0632 13.2485 22.5538C11.8608 21.5337 10.0149 20.0955 8.17332 18.4183C6.32719 16.7371 4.51168 14.8394 3.16467 12.903C1.80527 10.9488 1 9.06457 1 7.38813C1 3.95203 3.1286 1.84472 5.85239 1.20869C8.61928 0.562594 11.9791 1.45647 14.2299 4.17349Z"
+            stroke="white" stroke-width="2" />
+        </g>
+        <defs>
+          <filter id="filter0_b" x="-4" y="-4" width="38" height="33" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feGaussianBlur in="BackgroundImage" stdDeviation="2" />
+            <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur" result="shape" />
+          </filter>
+        </defs>
+      </svg>
+      <div
+        class="likes-number"
+      >
+        <svg
+          viewBox="0 0 18 16"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="thumpUp"
+        >
+          <path
+            d="M10.5228 0.374106C9.2553 2.04233 7.62448 3.53188 6.47783 4.45856C5.92753 4.90329 5.58223 5.55666 5.58223 6.25738V13.5451C5.58223 14.9337 6.62461 15.2545 7.14581 15.2414H11.7149C13.4468 15.2414 14.2102 14.9181 14.6799 14.2348C15.8671 12.5079 16.5986 10.1246 16.9667 9.04792C17.9473 6.18031 17.163 5.14244 15.4834 5.14244H11.6176C11.433 5.14244 11.2903 4.98805 11.3229 4.8093C11.4123 4.31868 11.6318 3.44562 12.0769 2.30216C12.4775 1.27286 12.0776 0.563979 11.5899 0.151781C11.2583 -0.128406 10.7845 0.0296915 10.5228 0.374106Z"
+            fill="#1CBD8D"
+          />
+          <path
+            d="M0.777378 13.8804V6.50344C0.777378 5.75178 1.39662 5.14244 2.1605 5.14244C2.92437 5.14244 3.54361 5.75178 3.54361 6.50344V13.8804C3.54361 14.6321 2.92437 15.2414 2.1605 15.2414C1.39662 15.2414 0.777378 14.6321 0.777378 13.8804Z"
+            fill="#1CBD8D"
+          />
+        </svg>
+        <p class="like-count" *ngIf="meelzScreen">{{n.likes}}</p>
+        <p class="like-count" *ngIf="recipeScreen">{{n.likes}}</p>
+        <p class="like-count" *ngIf="chefTableScreen">{{n.likes}}</p>
+        <p class="like-count" *ngIf="masterClassScreen">{{n.likes}}</p>
+        <p class="like-count" *ngIf="blogScreen">{{n.likes}}</p>
+        <p class="like-count" *ngIf="chefStoreScreen">{{n.likes}}</p>
+      </div>
+    </div>
+
+    <div class="cardContent">
+      <h1 *ngIf="meelzScreen">{{n.menu.heading}}</h1>
+      <h1 *ngIf="recipeScreen">{{n.mealKitInfo.heading}}</h1>
+      <h1 *ngIf="chefTableScreen">{{n.chefTableInfo.heading}}</h1>
+      <h1 *ngIf="masterClassScreen">{{n.masterClass.description}}</h1>
+      <h1 *ngIf="blogScreen">{{n.blog.heading}}</h1>
+      <h1 *ngIf="chefStoreScreen">{{n.chefsStore.heading}}</h1>
+      <mat-card-actions *ngIf="cardLevel">
+        <img [src]="'../assets/img/cam.svg'" alt="img" style="position: relative; top: 7px; margin-right: 2%">
+        <button class="meelzBtn" style="margin-right: 2%">Family</button>
+<!--        <button class="meelzBtn" style="margin-right: 2%">{{n.additionalInfo.duration}} min</button>-->
+        <button class="meelzBtn" style="margin-right: 2%">Easy Level</button>
+      </mat-card-actions>
+      <mat-card-content *ngIf="cardDesc">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        </p>
+      </mat-card-content>
+      <div class="cardDetailsBuy" *ngIf="cardPrice">
+        <div>
+          <p *ngIf="meelzScreen" style="font-size: 16px; padding-top: 22%">AED {{n.menu.price}}</p>
+          <p *ngIf="recipeScreen" style="font-size: 16px; padding-top: 22%">AED {{n.mealKitInfo.price}}</p>
+          <p *ngIf="chefTableScreen" style="font-size: 16px; padding-top: 22%">AED {{n.chefTableInfo.price}}</p>
+          <p *ngIf="masterClassScreen" style="font-size: 16px; padding-top: 22%">AED {{n.masterClass.price}}</p>
+          <p *ngIf="blogScreen" style="font-size: 16px; padding-top: 22%">AED {{n.blog.price}}</p>
+          <p *ngIf="chefStoreScreen" style="font-size: 16px; padding-top: 22%">AED {{n.chefsStore.price}}</p>
+        </div>
+        <div class="cardDetailsAmount" *ngIf="cardBtn">
+          <div *ngIf="n.amount >= 1" (click)="decreaseAmountMeelz(n,i)" class="decrementBtn">
+            <p style="padding-top: 29%; color: #68572D; font-size: 25px">-</p>
+          </div>
+          <p style="padding-left: 12px; padding-right: 12px">{{n.amount}}</p>
+          <div [ngClass]="[n.amount >=1 ? 'btnChange' : 'btnStandard']" (click)="increaseAmountMeelz(n,i)"
+            class="incrementBtn">
+            <p style="padding-top: 29%; color: #68572D; font-size: 25px">+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card>
+</div>
+
+<button mat-stroked-button *ngIf="this.end < data.length" (click)="expandLoop()" class="showMoreBtn">Show
+  more</button>

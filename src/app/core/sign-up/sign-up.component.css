@@ -1,0 +1,381 @@
+input {
+  color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  caret-color: black;
+  font-family: Averta-Regular;
+}
+
+p {
+  margin: 0;
+}
+
+::ng-deep.mat-dialog-container {
+  padding: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  position: relative;
+}
+
+.show-pass-icon {
+  color: rgba(160, 160, 160, 1);
+}
+
+.main {
+  display: flex;
+  padding: 40px 40px;
+  height: 746px;
+  width: 446px;
+  background: #ffffff;
+  border-radius: 12px;
+  position: relative;
+}
+
+h3 {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 110%;
+  letter-spacing: -0.5px;
+}
+
+.header {
+  width: 182px;
+  height: 29px;
+  color: black !important;
+  margin: 0;
+}
+
+.name-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  width: 37px;
+  height: 13px;
+  color: black;
+  margin: 0 0 8px 0;
+}
+
+.name-box {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 16px;
+  width: 366px;
+  height: 48px;
+  padding: 15px 15px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.nameDiv {
+  padding-top: 40px;
+}
+
+.email-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  font-size: 13px;
+  width: 35px;
+  height: 13px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.email-box {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 100%;
+  font-size: 16px;
+  width: 366px;
+  height: 48px;
+  padding: 15px 15px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.emailDiv {
+  padding-top: 20px;
+}
+
+.phone-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  width: 35px;
+  height: 13px;
+  color: black;
+  margin-bottom: 8px;
+}
+
+.phoneDiv {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.close-icon {
+  width: 16px;
+  height: 16px;
+  padding: 0 !important;
+  line-height: 0;
+  min-width: 0;
+}
+
+.orDiv {
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+
+.phone-box {
+  width: 366px;
+  height: 48px;
+  padding: 15px 15px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.termsDiv {
+  padding-top: 20px;
+}
+
+.password-label {
+  width: 58px;
+  height: 13px;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 100%;
+  color: #373737;
+  margin-bottom: 8px;
+}
+
+.password-input {
+  padding: 15px;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  width: 324px;
+  height: 48px;
+}
+
+.buttonDiv {
+  padding-top: 15px;
+}
+
+.pass-box {
+  display: flex;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  width: 366px;
+  height: 53px;
+  border: 1px solid #eeeeee;
+  box-sizing: border-box;
+  border-radius: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  line-height: 100%;
+}
+
+.visibility-button {
+  width: 20px;
+  height: 14px;
+  padding: 0 0;
+  margin: 0 0;
+  color: #b8aead;
+}
+
+.register-button {
+  display: flex;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 16px;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 159px;
+  width: 360px;
+  height: 50px;
+  background: #ffdf36;
+  border-radius: 12px;
+  border: none;
+  color: #68572d;
+}
+
+.terms-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 400;
+  width: 367px;
+  height: 36px;
+  color: black;
+  margin: 0;
+}
+
+.or-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  width: 366px;
+  height: 17px;
+  color: #f0f0ed;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.or-label-letters {
+  color: #373737;
+}
+
+.or {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #373737;
+}
+
+.icon-box {
+  width: 233px;
+  height: 23px;
+  text-align: center;
+}
+
+.facebook-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.google-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.twitter-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.linkedin-icon {
+  width: 23px;
+  height: 23px;
+}
+
+.iconDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 233px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.account-label {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  height: 20px;
+  width: 192px;
+  color: black;
+}
+
+.logIn-label {
+  margin-left: 8px;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  height: 20px;
+  width: 48px;
+  font-size: 16px;
+  color: #1cbd8d;
+  text-decoration: none;
+}
+
+.logInDiv {
+  display: flex;
+  justify-content: center;
+}
+
+::ng-deep.material-icons {
+  font-size: 19px;
+}
+
+.sign-up {
+  width: 57px;
+  height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1cbd8d;
+}
+
+.or-label p {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+}
+
+.or-label p:before,
+.or-label p:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid;
+  margin: auto;
+}
+
+.or-label p:before {
+  margin-right: 10px;
+}
+
+.or-label p:after {
+  margin-left: 10px;
+}
+
+.privacy-label {
+  text-decoration: none;
+  color: #1cbd8d;
+}
+
+.termsOfUse-label {
+  text-decoration: none;
+  color: #1cbd8d;
+}
+
+.mat-error {
+  position: fixed;
+  font-size: 11px;
+}

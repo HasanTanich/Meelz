@@ -1,0 +1,52 @@
+<div fxLayout="column" class="container">
+  <app-header [quantity]="quantity"></app-header>
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs_item">
+      <a routerLink="/home" class="breadcrumbs_link">Home</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <p>Meal Kits</p>
+    </li>
+  </ul>
+
+  <h1 class="heading">Meal Kits</h1>
+
+  <app-search-bar
+    (isActive)="onIsActive($event)"
+    (isActive)="onIsActiveChanged($event)"
+    [pageItems]="'meal kits'"
+  >
+  </app-search-bar>
+
+  <app-filters-tab
+    [Rating]="'Rating'"
+    [Price]="'Price'"
+    [Family]="'Family'"
+    [Chef]="'Chef'"
+    [mealKitsPage]="true"
+    (reverseRating)="onSortRating($event)"
+    (reverseFamily)="onSortFamily($event)"
+    (reversePrice)="onSortPrice($event)"
+  >
+  </app-filters-tab>
+
+  <app-meal-kit-card
+    [cards]="mealKits"
+    [mealKitPage]="true"
+    [searchText]="searchText"
+    [isActive]="isActive"
+    [reverseRating]="reverseRating"
+    [reverseFamily]="reverseFamily"
+    [reversePrice]="reversePrice"
+    [urlRoute]="'meal-kits'"
+    [cardTitle]="'heading'"
+    [cardImage]="'imageURL'"
+    (newItemEvent)="addItem($event)"
+    (oldItemEvent)="removeItem($event)"
+  >
+  </app-meal-kit-card>
+
+  <app-bottom-paginator></app-bottom-paginator>
+</div>
+
+<app-footer></app-footer>

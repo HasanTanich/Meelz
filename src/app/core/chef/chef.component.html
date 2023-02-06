@@ -1,0 +1,47 @@
+<div fxLayout="column" class="container">
+  <app-header></app-header>
+
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs_item">
+      <a routerLink="/home" class="breadcrumbs_link">Home</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <p>Chef</p>
+    </li>
+  </ul>
+
+  <h1 class="heading">Chefs</h1>
+
+  <app-search-bar
+    (isActive)="onIsActive($event)"
+    (isActive)="onIsActiveChanged($event)"
+    [pageItems]="'chefs'"
+  >
+  </app-search-bar>
+
+  <app-filters-tab
+    [Rating]="'Rating'"
+    [Price]="'Price'"
+    [Name]="'Name'"
+    [chefPage]="true"
+    (reverseRating)="onSortRating($event)"
+    (reverseName)="onSortName($event)"
+  >
+  </app-filters-tab>
+
+  <app-card-one
+    [cards]="allChefs"
+    [chefsPage]="true"
+    [searchText]="searchText"
+    [isActive]="isActive"
+    [reverseRating]="reverseRating"
+    [reverseName]="reverseName"
+    [urlRoute]="'chef'"
+    [cardTitle]="'chefName'"
+    [cardImage]="'imageURL'"
+  >
+  </app-card-one>
+
+  <app-bottom-paginator></app-bottom-paginator>
+</div>
+<app-footer></app-footer>

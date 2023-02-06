@@ -1,0 +1,147 @@
+@import url(//db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta-Regular);
+@font-face {
+  font-family: "Averta-Regular";
+  src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot");
+  src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff") format("woff"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.svg#Averta-Regular") format("svg");
+}
+
+.chef-Meelz h1 {
+  font-weight: bold;
+}
+.chef-Meelz h3 {
+  font-weight: bold;
+  margin-top: 15px;
+}
+.chef-Meelz p {
+  font-weight: 300;
+  color: rgb(68, 68, 68);
+}
+.chef-Meelz {
+  display: inline-flex;
+  flex-flow: row wrap;
+  flex-wrap: wrap;
+  gap: 39px;
+  width: 100%;
+  padding: 0 50px 50px 0;
+  /* margin: 10px; */
+}
+.heart-icon {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+}
+.thumb-like {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+}
+.meelzBtn {
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: #F6F6F6;
+  border: none;
+  cursor: pointer;
+}
+.cardDetailsBuy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardDetailsAmount {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.decrementBtn {
+  height: 40px;
+  width: 40px;
+  background-color: transparent;
+  border-radius: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+  border: 1px solid #FFDF36;
+  cursor: pointer;
+}
+
+.incrementBtn {
+  height: 40px;
+  width: 40px;
+  background-color: #FFDF36;
+  border-radius: 12px;
+  padding-bottom: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.likes-number {
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 18%;
+  padding: 2% 3%;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.like-count {
+  font-size: 1.3vw;
+  margin: 0;
+}
+
+.thumpUp {
+  width: 40%;
+  height: 40%;
+}
+
+.chef-card-meelz {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* max-width: 400px; */
+  min-width: 300px;
+  /* height: 400px; */
+  width: 29%;
+  height: auto;
+  background: #FFFFFF;
+  color: black;
+  font-family: Averta-Regular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 16px;
+  margin-left: 0;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.05);
+}
+.showMoreBtn {
+  font-family: Averta-Regular;
+  background-color: #F6F6F6;
+  color: rgba(55, 55, 55, 0.7);
+  width: 92%;
+  text-align: center;
+  font-size: 17px;
+  height: 73px;
+  margin-bottom: 120px;
+}
+.mat-card-actions {
+  margin-left: 0!important;
+  padding: 0!important;
+}
+.cardContent {
+  padding: 2%;
+}
+.imgStyle {
+  max-height: 200px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  object-fit: cover;
+  object-position: center;
+}

@@ -1,0 +1,87 @@
+.dates {
+  margin: 18% 0 0 15%;
+  background: #FFFFFF;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #EEEEEE;
+  padding: 1% 6% 6% 6%;
+  border-radius: 16px;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  height: 5vh;
+  justify-content: space-between;
+  align-items: center;
+}
+.alignment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.shareBtn {
+  border-radius: 10px;
+  border: 1px solid #EEEEEE;
+  text-align: center;
+  padding-top: 4%;
+
+}
+.likeBtn {
+  border-radius: 10px;
+  border: 1px solid #EEEEEE;
+  text-align: center;
+  padding-top: 4.9%;
+}
+.datesBtn {
+  border: none;
+  border-radius: 12px;
+  padding: 3px 20px;
+  font-size: 11px;
+  font-weight: 600;
+  background-color: #FFDF36;
+  color: #373737;
+  transition: .3s ease;
+  font-family: Averta-Regular;
+}
+.svgDate {
+  position: relative;
+  top: 7px;
+  left: 5px;
+}
+.groupSize {
+  max-width: 39%;
+  min-width: 29%;
+}
+.duration {
+  max-width: 34%;
+  min-width: 25%;
+}
+.type {
+  max-width: 25%;
+  min-width: 18%;
+}
+.language {
+  max-width: 39%;
+  min-width: 28%;
+}
+@media only screen and (max-width: 1024px) {
+  .dates {
+    margin: 0;
+  }
+  .groupSize {
+    min-width: 37%;
+  }
+  .duration {
+    min-width: 32%!important;
+  }
+  .type {
+    min-width: 22%!important;
+  }
+  .language {
+    min-width: 37%!important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+}

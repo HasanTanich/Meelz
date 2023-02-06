@@ -1,0 +1,20 @@
+<div class="container">
+  <app-header></app-header>
+</div>
+<img *ngIf="chefTableArray" src="{{chefTableArray.backgroundImg}}" alt="menu"  class="cover-image">
+<div class="chefTable" style="padding: 0 9% 5% 9%">
+  <div class="leftSide">
+    <div class="headerDiv">
+      <app-chef-table-details-header *ngIf="chefTableData" [chefTable]="chefTableData"></app-chef-table-details-header>
+    </div>
+    <div class="datesDiv">
+      <app-chef-table-details-dates *ngIf="chefTableData" [chefTable]="chefTableData"></app-chef-table-details-dates>
+    </div>
+  </div>
+  <div class="rightSide">
+    <app-chef-table-detail-menu *ngIf="chefTableData" [chefData]="chefTableData"></app-chef-table-detail-menu>
+    <app-chef-table-details-required *ngIf="chefTableData" [chefData]="chefTableData"></app-chef-table-details-required>
+    <app-chef-table-detail-info *ngIf="chefTableData" [chefData]="chefTableData"></app-chef-table-detail-info>
+  </div>
+</div>
+<app-footer></app-footer>

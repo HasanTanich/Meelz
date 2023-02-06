@@ -1,0 +1,72 @@
+<div>
+
+    <app-top-paginator *ngIf="dashboardChefs || dashboardMenu || dashboardChefTable" [cards]="cards"
+      [dataSource]="dataSource" [pageSize]="3" [title]="title" [whiteBackground]="true" [chefsPage]="true"
+      [urlRoute]="urlRoute" class="no-select" [onlySeeAll]="true" [onlySeeNone]="false">
+    </app-top-paginator>
+  
+    <div class="cards" [ngClass]="{'menuCards' : menuPage}">
+      <mat-card class="single-card" 
+        [ngClass]="{'chefsPage-card' : chefsPage, 'menuPage-card' : menuPage, 'chefTable-card' : chefTablePage || dashboardChefTable}"
+        *ngFor="let card of cards | async ">
+  
+        <img *ngIf=" menuPage || dashboardMenu && !dashboardMenu1" mat-card-image [src]="card.blog[cardImage][0]"
+          alt="Photo of a Shiba Inu" class="chef-image" [routerLink]="'/' + urlRoute + '/' + card.id" 
+          [ngClass]="[ menuPage || dashboardMenu  ? 'menuPage-card-image' : '']">
+  
+        <img *ngIf="dashboardMenu1 && dashboardMenu" mat-card-image [src]="card.blog[cardImage][0]" alt="Photo of a Shiba Inu"
+          class="chef-image" [routerLink]="'/' + urlRoute + '/' + card.id"
+          [ngClass]="[ menuPage || dashboardMenu  ? 'menuPage-card-image' : '']">
+  
+        <img *ngIf="chefsPage || chefTablePage || dashboardChefs || dashboardChefTable" mat-card-image
+          [src]="card.blog[cardImage][0]" alt="Photo of a Shiba Inu" class="chef-image"
+          [routerLink]="'/' + urlRoute + '/' + card.id"
+          [ngClass]="{'chefsPage-card-image' : chefsPage, 'chefTable-card-image' : chefTablePage || dashboardChefTable }">
+  
+        <mat-card-content>
+          <div fxLayout="column" class="chef-content">
+            <h2 *ngIf="menuPage || dashboardMenu" class="card-title"
+              [ngClass]="{'menuPage-card-title':  menuPage, 'dashboardMenu-card-title' : dashboardMenu}">
+              <div
+                *ngIf="(card.blog[cardTitle].length>20 && mobileScreen) || card.blog[cardTitle].length>30 ;else heheBlock1">
+                <div matTooltip="{{card.blog[cardTitle]}}" matTooltipClass="tooltip">
+                  {{cropString(card.blog[cardTitle])}}
+                </div>
+              </div>
+              <ng-template #heheBlock1>
+                {{card.blog[cardTitle]}}
+              </ng-template>
+            </h2>
+            <h2 *ngIf="chefsPage || chefTablePage || dashboardChefs || dashboardChefTable" class="card-title"
+              [ngClass]="{'menuPage-card-title' : menuPage, 'chefTable-card-title' : chefTablePage || dashboardChefTable, 'chefsPage-card-title' : chefsPage}">
+              <div *ngIf="card.blog[cardTitle].length>20 && mobileScreen;else heheBlock">
+                <div matTooltip="{{card.blog[cardTitle]}}" matTooltipClass="tooltip">
+                  {{cropString(card.blog[cardTitle])}}
+                </div>
+              </div>
+              <ng-template #heheBlock>
+                {{card.blog[cardTitle]}}
+              </ng-template>
+            </h2>
+            <div *ngIf="menuPage || dashboardMenu" class="card-tags">
+             
+              <div class="family-tag">Family</div>
+            </div>
+
+            <p *ngIf="chefsPage || dashboardChefs" class="card-text" [ngClass]="{'chefsPage-card-text' : chefsPage}">Lorem
+              ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+            <p *ngIf="chefTablePage || dashboardMenu" class="card-text"
+              [ngClass]="[ menuPage || dashboardMenu ? 'menuPage-card-text' : '']">
+              Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit. </p>
+            <p *ngIf="chefTablePage || dashboardChefTable" class="card-text"
+              [ngClass]="[chefTablePage || dashboardChefTable ? 'menuPage-card-text' : '']">
+              {{card[cardDescription]}} </p>
+           
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  
+  </div>

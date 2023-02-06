@@ -1,0 +1,20 @@
+<div class="container">
+  <app-header></app-header>
+</div>
+<img *ngIf="masterClassArray " src="{{masterClassArray.masterClass.background}}" alt="menu" style="min-width: 100%; max-height: 40vh; object-fit: cover; object-position: top">
+<div class="masterClass" style="padding: 0 9% 5% 9%">
+  <div class="leftSide">
+    <div class="headerDiv">
+      <app-master-classes-edit-header *ngIf="masterClassData" [masterClass]="masterClassData"></app-master-classes-edit-header>
+    </div>
+    <div class="datesDiv">
+      <app-master-classes-edit-dates *ngIf="masterClassData" [masterClass]="masterClassData" ></app-master-classes-edit-dates>
+    </div>
+  </div>
+  <div class="rightSide">
+    <app-master-classes-edit-program *ngIf="masterClassData" [masterClass]="masterClassData"></app-master-classes-edit-program>
+    <app-master-classes-edit-required *ngIf="masterClassData" [masterClass]="masterClassData"></app-master-classes-edit-required>
+    <app-master-classes-edit-participate *ngIf="masterClassData" [masterClass]="masterClassData"></app-master-classes-edit-participate>
+  </div>
+</div>
+<app-footer></app-footer>

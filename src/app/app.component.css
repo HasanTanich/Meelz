@@ -1,0 +1,22 @@
+@import url(//db.onlinewebfonts.com/c/f036e81e6040acc6b43aabc036862d21?family=Averta-Regular);
+@font-face {
+    font-family: "Averta-Regular";
+    src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot");
+    src: url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.woff") format("woff"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f036e81e6040acc6b43aabc036862d21.svg#Averta-Regular") format("svg");
+}
+
+* {
+    font-family: Averta-Regular;
+}
+
+p {
+    font-family: Averta-Regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Averta-Regular;
+}
+
+p {
+    font-family: Averta-Regular;
+}

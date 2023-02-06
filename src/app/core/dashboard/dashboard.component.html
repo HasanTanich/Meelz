@@ -1,0 +1,206 @@
+<app-header [homeScreen]="true" [quantity]="quantity"></app-header>
+
+<div>
+  <div class="container">
+    <div class="box-1">
+      <h1>Home</h1>
+      <h1><span>Cooking</span></h1>
+      <p class="box-1-text">Delivering quality home cooking to your door</p>
+    </div>
+    <div class="box-2">
+      <img [src]="'../assets/img/img1.png'" alt="img" />
+    </div>
+  </div>
+
+  <div class="dashboard-search">
+    <mat-tab-group>
+      <mat-tab label="menu">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="trendingMenuObs"
+          [parentAttribute]="'menu'"
+          [id]="'chef'"
+          [menuPage]="true"
+          [tabPage]="'menu'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Price'"
+          [cardImage]="'imageUrl'"
+          [cardTitle]="'heading'"
+          [cardTags]="'menuDetails'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+      <mat-tab label="meal kits">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="trendingMealKitsObs"
+          [parentAttribute]="'mealKitInfo'"
+          [id]="'chef'"
+          [tabPage]="'meal-kits'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Price'"
+          [mealKitPage]="true"
+          [cardImage]="'imageURL'"
+          [cardTitle]="'heading'"
+          [cardTags]="'mealKitDetails'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+      <mat-tab label="masterclasses">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="masterClassObs"
+          [parentAttribute]="'masterClass'"
+          [id]="'chefID'"
+          [tabPage]="'master-classes'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Price'"
+          [masterClassPage]="true"
+          [cardImage]="'background'"
+          [cardTitle]="'heading'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+      <mat-tab label="chefs">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="chefsObs"
+          [parentAttribute]="'menu'"
+          [id]="'chefs'"
+          [tabPage]="'chef'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Status'"
+          [chefPage]="true"
+          [cardImage]="'imageURL'"
+          [cardTitle]="'chefName'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+      <mat-tab label="chef's store">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="chefStoreObs"
+          [parentAttribute]="'chefsStore'"
+          [id]="'chefID'"
+          [tabPage]="'chefsstore'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Price'"
+          [chefStorePage]="true"
+          [cardImage]="'background'"
+          [cardTitle]="'heading'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+      <mat-tab label="chef's table">
+        <app-search-filters-box
+          [chefsData]="chefsObs"
+          [tabData]="chefsTableObs"
+          [parentAttribute]="'chefTableInfo'"
+          [id]="'chefID'"
+          [tabPage]="'chef-table'"
+          [filter1]="'Cuisine'"
+          [filter2]="'Chef'"
+          [filter3]="'Rating'"
+          [filter4]="'Price'"
+          [chefTablePage]="true"
+          [cardImage]="'backgroundImg'"
+          [cardTitle]="'heading'"
+        >
+        </app-search-filters-box>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+<div class="dashboard-layout">
+  <div class="chefs">
+    <app-card-one
+      [cards]="chefsObs"
+      [dashboardChefs]="true"
+      [title]="'Chefs'"
+      [urlRoute]="'chef'"
+      [cardTitle]="'chefName'"
+      [cardImage]="'imageURL'"
+      [pageSizeNumber]="pageSize"
+    >
+    </app-card-one>
+  </div>
+
+  <div class="masterClasses">
+    <app-card-two
+      [cards]="masterClassObs"
+      [dashboard]="true"
+      [title]="'MasterClasses'"
+      [urlRoute]="'master-classes'"
+    >
+    </app-card-two>
+  </div>
+
+  <div>
+    <app-chef-table-card
+      [cards]="chefsTableObs"
+      [dashboardChefTable]="true"
+      [title]="'Chefs Table'"
+      [urlRoute]="'chef-table'"
+      [cardTitle]="'heading'"
+      [cardImage]="'backgroundImg'"
+      [cardDescription]="'description'"
+      [pageSizeNumber]="chefTablePageSize"
+    >
+    </app-chef-table-card>
+  </div>
+
+  <div>
+    <app-trending-menu-card
+      [cards]="trendingMenuObs"
+      [dashboardMenu]="true"
+      [urlRoute]="'menu'"
+      [title]="'Trending Menu'"
+      [cardTitle]="'heading'"
+      [cardImage]="'imageUrl'"
+      [pageSizeNumber]="pageSize"
+      (newItemEvent)="addItem($event)"
+      (oldItemEvent)="removeItem($event)"
+    >
+    </app-trending-menu-card>
+  </div>
+
+  <div>
+    <app-meal-kit-card
+      [cards]="trendingMealKitsObs"
+      [dashboardMealKits]="true"
+      [urlRoute]="'meal-kits'"
+      [title]="'Trending Meal Kits'"
+      [cardTitle]="'heading'"
+      [cardImage]="'imageURL'"
+      [pageSizeNumber]="pageSize"
+      (newItemEvent)="addItem($event)"
+      (oldItemEvent)="removeItem($event)"
+    >
+    </app-meal-kit-card>
+  </div>
+
+  <div class="chefs blog">
+    <app-blog-cards
+      [cards]="blogObs"
+      [dashboardChefs]="true"
+      [title]="'Blog'"
+      [urlRoute]="'blog'"
+      [cardTitle]="'heading'"
+      [cardImage]="'imageUrl'"
+      [pageSizeNumber]="pageSize"
+    >
+    </app-blog-cards>
+  </div>
+</div>
+
+<app-footer></app-footer>

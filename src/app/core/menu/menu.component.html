@@ -1,0 +1,32 @@
+<div fxLayout="column" class="container">
+    <app-header [quantity]="quantity"></app-header>
+
+    <ul class="breadcrumbs">
+        <li class="breadcrumbs_item">
+            <a routerLink="/home" class="breadcrumbs_link">Home</a>
+        </li>
+        <li class="breadcrumbs_item">
+            <p>Menu</p>
+        </li>
+    </ul>
+
+    <h1 class="heading">Menu</h1>
+
+    <app-search-bar (isActive)="onIsActive($event)" (isActive)="onIsActiveChanged($event)" [pageItems]="'Menu'">
+    </app-search-bar>
+
+    <app-filters-tab [Rating]="'Rating'" [Price]="'Price'" [Family]="'Family'" [Chef]="'Chef'" [menuPage]="true"
+        (reverseRating)="onSortRating($event)" (reverseFamily)="onSortFamily($event)"
+        (reversePrice)="onSortPrice($event)">
+    </app-filters-tab>
+
+    <app-trending-menu-card [cards]="allTrendingMenu" [menuPage]="true" [urlRoute]="'menu'" [title]="'Trending Menu'"
+        [cardTitle]="'heading'" [cardImage]="'imageUrl'" [seeAll]="true" [isActive]="isActive" [searchText]="searchText"
+        [reverseRating]="reverseRating" [reversePrice]="reversePrice" (newItemEvent)="addItem($event)"
+        (oldItemEvent)="removeItem($event)">
+    </app-trending-menu-card>
+
+    <app-bottom-paginator></app-bottom-paginator>
+</div>
+
+<app-footer></app-footer>

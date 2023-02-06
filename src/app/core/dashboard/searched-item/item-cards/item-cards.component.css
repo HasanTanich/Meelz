@@ -1,0 +1,486 @@
+* {
+  font-family: Averta-Regular;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: Averta-Regular;
+}
+
+h1 {
+  font-size: 96px;
+  font-weight: 300;
+  color: #68572d;
+  letter-spacing: 0.8px;
+  line-height: 93.5%;
+}
+
+p {
+  color: #68572d;
+  margin: 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+.container {
+  padding: 0px 9% 9% 9%;
+}
+
+.cards {
+  margin-top: 3em;
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 3%;
+  row-gap: 40px;
+}
+
+.card-content {
+  padding: 6%;
+}
+
+.like {
+  width: 10%;
+  position: absolute;
+  display: inline-block;
+  right: 4%;
+  top: 5%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.like:active,
+.cards.like:focus {
+  transform: scale(1.1);
+}
+
+.red-heart-icon {
+  fill: #d0312d !important;
+}
+
+.likes-number {
+  position: absolute;
+  left: 4%;
+  top: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 23%;
+  padding: 2% 3%;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.like-count {
+  font-size: 1.3vw;
+}
+
+.thumbUp {
+  width: 40%;
+  height: 40%;
+}
+
+.single-card {
+  max-width: 22.7%;
+  min-width: 22.7%;
+  height: 0%;
+  background-color: white;
+  color: black;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+  border-radius: 1em;
+  border: 0;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-image {
+  min-height: 200px;
+  max-height: 200px;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.mat-card-image {
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mat-card {
+  padding: 0;
+}
+
+.mat-card-image:first-child {
+  margin-top: 0;
+}
+
+.card-title {
+  font-family: Averta-Regular;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 0px;
+  /* height: 2.5vw; */
+}
+
+.card-text {
+  font-family: Averta-Regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 135%;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-top: 4%;
+}
+
+.mealkitPage-card {
+  max-width: 31%;
+  min-width: 31%;
+  height: 0%;
+}
+
+.mealkitPage-card-image {
+  max-height: 200px;
+  min-height: 200px;
+}
+
+.chefPage-card-image {
+  object-position: top;
+}
+
+.card-tags {
+  display: flex;
+  align-items: center;
+  margin-top: 4%;
+}
+
+.card-tag {
+  background: #f6f6f6;
+  border: hidden;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  /* font-size: 1.1vw; */
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 2%;
+  padding: 2% 4%;
+}
+
+.seats-tag {
+  width: 6em;
+  height: 24px;
+  background: #f6f6f6;
+  border: hidden;
+  border-radius: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  margin-left: 5px;
+  text-align: center;
+  padding: 4px 10px 6px 10px;
+}
+
+.price-amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 7%;
+}
+
+.masterclass-price {
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.amount {
+  display: flex;
+  direction: rtl;
+  align-items: center;
+  justify-content: center;
+}
+
+.price {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 110%;
+}
+
+.amount-count {
+  width: 10px;
+  height: 20px;
+}
+
+.add-amount-btn {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background: #ffdf36;
+  border: hidden;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.add-amount-btn-active {
+  border: 2px solid #ffdf36;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: white;
+}
+
+.remove-amount-btn-active {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ffdf36;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background: white;
+  margin-right: 10px;
+}
+
+/* end of Menu page styling */
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.plus-icon {
+  padding-top: 0.2em;
+  padding-left: 0.1em;
+}
+
+.minus-icon-div {
+  width: 100%;
+  height: 100%;
+  padding-top: 0.5em;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card-image {
+    min-height: 190px;
+    max-height: 190px;
+  }
+  .chefsPage-card-image {
+    min-height: 300px;
+    max-height: 300px;
+  }
+  .chefTable-card-image {
+    min-height: 215px;
+    max-height: 215px;
+  }
+  .mealkitPage-card-image {
+    min-height: 185px;
+    max-height: 185px;
+  }
+  .card-title {
+    font-size: 1.3vw;
+  }
+  .card-text {
+    font-size: 1.2vw;
+  }
+  .card-tag {
+    font-size: 1.1vw;
+  }
+  .price {
+    font-size: 1.3vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards {
+    margin-top: 2em;
+  }
+  .card-image {
+    min-height: 170px;
+    max-height: 170px;
+  }
+  .chefsPage-card-image {
+    min-height: 270px;
+    max-height: 270px;
+  }
+  .chefTable-card-image {
+    min-height: 170px;
+    max-height: 170px;
+  }
+  .mealkitPage-card-image {
+    min-height: 165px;
+    max-height: 165px;
+  }
+  .cards {
+    row-gap: 40px;
+    column-gap: 3%;
+  }
+  .video-tag {
+    width: 20px;
+    height: 20px;
+  }
+  .add-amount-btn {
+    width: 30px;
+    height: 30px;
+  }
+  .plus-icon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .cards {
+    margin-top: 2em;
+    column-gap: 3%;
+    row-gap: 25px;
+  }
+  .mealkitCards {
+    gap: 5%;
+    row-gap: 25px;
+    margin-top: 3em;
+  }
+  .single-card {
+    min-width: 30% !important;
+    max-width: 30% !important;
+  }
+  .mealkitPage-card {
+    max-width: 46%;
+  }
+  .card-image {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .mealkitPage-card-image {
+    min-height: 150px;
+    max-height: 150px;
+  }
+  .card-title {
+    font-size: 1.7vw;
+  }
+  .card-text {
+    font-size: 1.5vw;
+  }
+  .card-tag {
+    font-size: 1.5vw;
+  }
+  .price {
+    font-size: 1.4vw;
+  }
+  .likes-number {
+    padding: 1% 3%;
+  }
+}
+
+@media only screen and (max-width: 485px) {
+  .cards {
+    margin-top: 1em;
+  }
+  .mealkitCards {
+    row-gap: 20px;
+    margin-top: 2em;
+  }
+  .single-card {
+    max-width: 45% !important;
+    min-width: 100px !important;
+  }
+  /* .card-image {
+    min-height: 170px;
+    max-height: 170px;
+  } */
+  .mealkitPage-card-image {
+    min-height: 130px;
+    max-height: 130px;
+  }
+  .card-title {
+    font-size: 2.4vw;
+    /* height: 5.5vw; */
+  }
+  .card-text {
+    font-size: 2vw;
+  }
+  /* .card-tag {
+          font-size: 1.5vw;
+      } */
+  .price {
+    font-size: 2.2vw;
+  }
+  .cards {
+    column-gap: 5%;
+  }
+  .card-tags {
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+  }
+  .add-amount-btn {
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .remove-amount-btn-active {
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .video-tag {
+    height: 1.2em;
+  }
+  .seats-tag {
+    width: 50%;
+    height: 2.3em;
+    font-size: 0.7em;
+  }
+  .hours-tag {
+    width: 50%;
+    height: 2.3em;
+    font-size: 0.7em;
+  }
+  .plus-icon {
+    padding-top: 0.2em;
+    padding-left: 3%;
+  }
+  .minus-icon {
+    margin-bottom: 0.15em;
+    padding-right: 0.25em;
+    padding-left: 0.2em;
+  }
+  .add-amount-btn {
+    margin-left: 0.1em;
+  }
+  .remove-amount-btn-active {
+    margin-right: 0.1em;
+  }
+  .amount-count {
+    text-align: center;
+  }
+  .minus-icon-div {
+    padding: 0%;
+    padding-bottom: 2px;
+  }
+  .like-count {
+    font-size: 2vw;
+  }
+  .likes-number {
+    padding: 0% 3%;
+  }
+}

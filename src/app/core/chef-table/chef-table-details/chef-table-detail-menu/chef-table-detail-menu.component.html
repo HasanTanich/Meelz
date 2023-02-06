@@ -1,0 +1,23 @@
+<div class="menu">
+  <div style="margin-left: -2px!important;">
+    <p class="heading">Menu</p>
+  </div>
+  <ul class="ulMenu" *ngIf="chefData">
+    <li *ngFor="let f of (chefData | async)?.menu">{{f}}</li>
+<!--    <li>Mackerel, celery and seaweed</li>-->
+<!--    <li>Sunflower and black caviar</li>-->
+<!--    <li>Scallop, carrots and raspberries</li>-->
+<!--    <li>Sea urchin caviar, potatoes, tangerines</li>-->
+<!--    <li>Green tomatoes, milk mushrooms, Borodino bread</li>-->
+<!--    <li>Cod and fried chanterelles</li>-->
+<!--    <li>Quail, egg, corn</li>-->
+
+  </ul>
+  <div style="margin-left: -2px!important;">
+    <p class="heading">Special requests & allergies</p>
+  </div>
+  <p *ngIf="chefData" class="menuParagraph">{{(chefData | async)?.requestsAndAllergies}}</p><div style="margin-left: -2px!important;">
+  <p class="heading">Time at the table</p>
+</div>
+  <p *ngIf="chefData" class="menuParagraph">{{(chefData | async)?.timeAtTable}}</p>
+</div>

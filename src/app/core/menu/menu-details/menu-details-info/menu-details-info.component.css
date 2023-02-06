@@ -1,0 +1,155 @@
+.info {
+  padding-left: 4%;
+}
+.infoLike {
+  display: flex;
+  flex-direction: row;
+}
+.heading {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 110%;
+  letter-spacing: -0.5px;
+  color: #373737;
+}
+.caloriesDetails {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
+  opacity: 0.6;
+}
+.mat-divider {
+  border-top-color: rgba(0, 0, 0, 0.12);
+  width: 100%;
+}
+.infoButton {
+  margin: 9% 0 9% 0;
+  background-color: #F6F6F6;
+  border-radius: 16px;
+  padding: 5% 2% 5% 2%;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 100%;
+  color: #373737;
+}
+.marginRightSvg {
+  margin-right: 6%;
+}
+.buttonHeadingDesc {
+  display: flex;
+  flex-direction: row;
+  min-width: 71%;
+  gap: 3%;
+}
+.headingDesc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: fit-content;
+}
+.headingDescSvg {
+  display: flex;
+  align-items: center;
+  padding-left: 5%;
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+.priceDesc {
+  margin: 4% 0 2% 0;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 110%;
+  color: #373737;
+}
+.priceDescFull {
+  margin: 0 0 2% 0;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #373737;
+}
+.infoImportant {
+  background-color: #FAFAFA;
+  width: 100%;
+  border: 1px solid #EEEEEE;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 3% 3% 2% 3%;
+}
+.ulInfo {
+  margin-left: 1.5%!important;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: #373737;
+}
+.menuParagraph {
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: -0.5px;
+  color: #373737;
+  margin: 0!important;
+  padding-bottom: 2%;
+}
+.ulInfo li {
+  padding-bottom: 2%;
+  color: #373737;
+}
+.number-of-likes {
+  font-size: 17px;
+}
+@media only screen and (max-width: 768px) {
+  .info {
+    padding-left: 0;
+  }
+  .heading {
+    font-size: 17px;
+  }
+  .caloriesDetails {
+    font-size: 10px;
+  }
+  .infoButton {
+    font-size: 10px;
+  }
+  .priceDesc {
+    font-size: 12px;
+  }
+  .priceDescFull {
+    font-size: 11px;
+  }
+  .infoImportant {
+    font-size: 11px;
+  }
+  .ulInfo {
+    font-size: 11px;
+  }
+  .menuParagraph {
+    font-size: 12px;
+  }
+  .number-of-likes {
+    font-size: 10px;
+  }
+  .infoLike {
+    padding-top: 2%;
+  }
+  .buttonHeadingDesc {
+    min-width: 80%;
+  }
+}
+
+

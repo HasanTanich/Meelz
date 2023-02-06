@@ -1,0 +1,81 @@
+<div class="paginator2">
+    <div class="paginator-numbers">
+      <div class="paginator-numbers-arrows">
+        <div class="paginator-numbers-arrow-left">
+          <div *ngIf="!paginatorLeft;else leftButtonBlock">
+            <button
+              style="border-radius: 1em;border:0;padding-top: 0.3em;background-color: white;border: 0.12em solid rgb(217,217,217);"
+              class="left-right"
+              (click)=PreviousArrow()>
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 11L1 6L6 1" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <ng-template #leftButtonBlock>
+            <button style="border-radius: 1em;border:0;padding-top: 0.3em;"
+              (click)=PreviousArrow()
+              class="left-right">
+              <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M6 11L1 6L6 1" stroke="#373737" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </ng-template>
+        </div>
+        <div class="paginator-arrows-numbers" *ngFor="let item of paginatorButtonsArray; let i = index;">
+          <ng-container *ngIf="i+1===1; else brojevi">
+            <button class="L-B-R " [ngClass]="[activeButton ? 'active-button' : 'inactive-button']" [disabled]="item==more" 
+            (click)=PaginatorButtonClicked(item)>
+            {{item}}
+            </button>
+          </ng-container>
+          <ng-template #brojevi>
+            <ng-container *ngIf="paginatorButtonsArray.length-1===i;else srednjiBrojevi"><button class="R-B-R"
+                (click)=PaginatorButtonClicked(item)>{{item}}</button></ng-container>
+          </ng-template>
+          <ng-template #srednjiBrojevi>
+            <div *ngIf="item==more;else ostalo">
+              <button (click)=PaginatorButtonClicked(item) class="inactive-button" disabled style="cursor:default;">{{item}}</button>
+            </div>
+            <ng-template #ostalo>
+              <div *ngIf="i==1 && selectedSecond; else ehehe">
+                <button (click)=PaginatorButtonClicked(item)
+                  [ngClass]="[selectedSecond ? 'active-button' : '']">{{item}}</button>
+              </div>
+              <ng-template #ehehe>
+                <button (click)=PaginatorButtonClicked(item)>{{item}}</button>
+              </ng-template>
+            </ng-template>
+
+          </ng-template>
+        </div>
+        <div class="paginator-numbers-arrow-right">
+          <div *ngIf="paginatorRight;else rightButtonBlock">
+            <button style="border-radius: 1em;border:0;padding-top: 0.3em;"
+            class="left-right"  
+            (click)=NextArrow()><svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.6" d="M0.999999 1L6 6L1 11" stroke="#373737" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <ng-template #rightButtonBlock>
+            <button disabled
+              style="border-radius: 1em;border:0;padding-top: 0.3em;background-color: white;border: 0.12em solid rgb(217,217,217);"
+              class="left-right"  
+              (click)=NextArrow()><svg width="7" height="12" viewBox="0 0 7 12" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.999999 1L6 6L1 11" stroke="#D9D9D9" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </ng-template>
+
+        </div>
+      </div>
+    </div>
+    <div class="paginator-numbers-displayed">
+      <p>Showing {{dataStart}}-{{dataEnd}} of {{numberofData}} results</p>
+    </div>
+  </div>
+

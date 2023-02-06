@@ -1,0 +1,149 @@
+.breadcrumbs {
+  padding-top: 3%;
+  padding-bottom: 3%;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.8px;
+  width: 100%;
+  height: 20px;
+}
+
+.breadcrumbs_item {
+  display: inline-block;
+  color: #999999;
+}
+
+.breadcrumbs_item:not(:last-of-type)::after {
+  content: '/';
+  margin: 0 5px;
+  color: #cccccc;
+}
+
+.breadcrumbs_link {
+  text-decoration: none;
+  color: black;
+}
+
+.breadcrumbs_link:hover {
+  text-decoration: underline;
+}
+.heading {
+  padding-top: 1%;
+  font-size: 32px;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.action-likes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 1%;
+}
+.action-likes-numb-like{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.like-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 7px;
+}
+.thumb-up{
+  padding-bottom: 12%;
+}
+.number-of-likes{
+  font-family: Averta-Regular;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.video-desc {
+  padding-left: 10%;
+  display: flex;
+  flex-direction: row;
+  width: 255px;
+  font-weight: normal;
+}
+.video-desc-p {
+  font-size: 12px;
+  padding-left: 4%;
+  padding-top: 0.7%;
+  font-family: Averta-Regular;
+}
+.master-class-desc {
+  color: #373737;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+}
+.chef {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+.chef-desc {
+  padding-left: 1%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.chef-desc p {
+  height: 10px;
+}
+.imgChef {
+  width: 8vh;
+  height: 8vh;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media only screen and (max-width: 1024px) {
+
+
+}
+
+@media only screen and (max-width: 768px) {
+  .breadcrumbs {
+    font-size: 13px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+  .number-of-likes {
+    font-size: 13px;
+  }
+  .video-desc-p {
+    font-size: 13px;
+  }
+  .heading {
+    font-size: 20px;
+  }
+  .master-class-desc {
+    font-size: 13px;
+  }
+  .chef-desc {
+    font-size: 11px;
+  }
+  .imgChef {
+    width: 9vh;
+    height: 9vh;
+  }
+}

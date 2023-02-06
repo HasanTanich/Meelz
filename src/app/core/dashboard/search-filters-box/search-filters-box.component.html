@@ -1,0 +1,84 @@
+<form class="search-bar-filters-box" [formGroup]="form">
+  <div class="search-bar-filters">
+    <div
+      class="search-bar-filter"
+      style="display: flex; flex-direction: column"
+    >
+      <label class="filter-title">{{ filter1 }}</label>
+      <mat-form-field class="example-full-width" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          placeholder="Choose Cuisine"
+          autocomplete="off"
+          formControlName="cuisine"
+        />
+        <!-- <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let chef of tabChefs" [value]="chef">
+            {{ chef }}
+          </mat-option>
+        </mat-autocomplete> -->
+      </mat-form-field>
+    </div>
+    <div
+      class="search-bar-filter"
+      style="display: flex; flex-direction: column"
+      *ngIf="!chefPage"
+    >
+      <label class="filter-title">{{ filter2 }}</label>
+      <mat-form-field class="example-full-width" floatLabel="never">
+        <input
+          matInput
+          type="text"
+          placeholder="Choose Chef"
+          [matAutocomplete]="auto"
+          formControlName="chef"
+        />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let chef of tabChefs | async" [value]="chef">
+            {{ chef }}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+    <div
+      class="search-bar-filter"
+      style="display: flex; flex-direction: column"
+    >
+      <label class="filter-title">{{ filter3 }}</label>
+      <mat-form-field class="example-full-width" floatLabel="never">
+        <input
+          matInput
+          type="number"
+          placeholder="What rating"
+          autocomplete="off"
+          formControlName="rating"
+        />
+      </mat-form-field>
+    </div>
+    <div
+      class="search-bar-filter"
+      style="display: flex; flex-direction: column"
+    >
+      <label class="filter-title">{{ filter4 }}</label>
+      <mat-form-field class="example-full-width" floatLabel="never">
+        <input
+          matInput
+          [type]="chefPage ? 'text' : 'number'"
+          placeholder="What {{ filter4 }}"
+          autocomplete="off"
+          formControlName="price"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+  <button
+    mat-button
+    matSuffix
+    class="search-button"
+    type="submit"
+    (click)="onSearch()"
+  >
+    Search
+  </button>
+</form>

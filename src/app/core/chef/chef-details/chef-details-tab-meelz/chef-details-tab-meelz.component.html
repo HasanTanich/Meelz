@@ -1,0 +1,7 @@
+<app-filters-tab (reverseRating)="onChefMeelzSortRating($event)" (reversePrice)="onChefMeelzSortPrice($event)"
+    [Rating]="'Rating'" [Price]="'Price'" [chefDetails]="true">
+</app-filters-tab>
+<mat-spinner *ngIf="!loaded" color='accent' style="margin-left: auto; margin-right: auto"></mat-spinner>
+<app-card-three  *ngIf="allChefsDataArray && allChefsDataArray.length > 0" [data]="allChefsDataArray" [meelzScreen]="true" [cardPrice]="true" [cardDesc]="true" [cardLevel]="true" [cardBtn]="true"
+    [reverseRating]="chefMeelzRating" [reversePrice]="chefMeelzPrice">
+</app-card-three>

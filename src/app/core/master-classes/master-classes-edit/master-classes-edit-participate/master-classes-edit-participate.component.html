@@ -1,0 +1,25 @@
+<div class="participate">
+  <p class="heading">How to participate</p>
+  <div class="zoomBox">
+    <div class="zoomDiv">
+      <svg width="30" height="21" viewBox="0 0 30 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.326 17.47H18.348M5.13 13.24V1H25.37V13.24H5.13ZM5.13 13.24L1 20H29.5L25.37 13.24H5.13ZM5.13 13.24H25.37H5.13Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M15.25 5.74756C15.9058 5.74756 16.4375 5.2159 16.4375 4.56006C16.4375 3.90422 15.9058 3.37256 15.25 3.37256C14.5942 3.37256 14.0625 3.90422 14.0625 4.56006C14.0625 5.2159 14.5942 5.74756 15.25 5.74756Z" fill="#373737"/>
+      </svg>
+      <p class="zoomDivTxt"><b>Join a video call</b></p>
+      <p class="zoomDivTxt"><span style="color: #1CBD8D">Download Zoom</span> for free on a desktop or mobile device.
+        After you book, you'll receive an e-mail with a link
+        and details on how to join</p>
+    </div>
+    <div class="zoomDiv">
+      <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.6399 12.2522C13.8345 12.2522 16.4243 9.7932 16.4243 6.75989C16.4243 3.72657 13.8345 1.26758 10.6399 1.26758C7.44524 1.26758 4.85547 3.72657 4.85547 6.75989C4.85547 9.7932 7.44524 12.2522 10.6399 12.2522Z" stroke="#373737"/>
+        <path d="M17.6745 14C19.8195 17.01 20.1985 18.93 20.2655 20.54C20.2885 21.09 19.8325 21.54 19.2795 21.54H1.99851C1.44651 21.54 0.990483 21.09 1.01248 20.54C1.08048 18.88 1.47453 16.89 3.75253 13.79" stroke="#373737" stroke-linecap="round"/>
+        <path d="M17.8203 1C20.1993 1 22.1283 2.82997 22.1283 5.08997C22.1283 6.70997 21.1423 8.10002 19.7113 8.77002" stroke="#373737" stroke-linecap="round"/>
+        <path d="M23.0588 10.48C24.5448 12.56 24.8928 13.95 24.9748 15.09C25.0138 15.64 24.5518 16.09 23.9998 16.09H22.8398" stroke="#373737" stroke-linecap="round"/>
+      </svg>
+      <p class="zoomDivTxt"><b>Book for a private group</b></p>
+      <p  *ngIf="masterClassArray" class="zoomDivTxt">Want to join with just your family and friends? Take A Chef will host a private group for up to 10 guests, starting at {{masterClassArray.masterClass.privatePrice}}$</p>
+    </div>
+  </div>
+</div>

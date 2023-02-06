@@ -1,0 +1,50 @@
+.zoomDivTxt {
+  font-size: 16px;
+}
+
+.heading {
+  padding-top: 2%;
+  font-size: 25px;
+  font-family: Averta-Regular;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+}
+.participate {
+  padding-top: 2%;
+}
+.zoomBox {
+  padding-top: 2%;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+.zoomDiv {
+  font-family: Averta-Regular;
+  color: #373737;
+  padding: 2%;
+  min-width: 45%;
+  background: #FFFFFF;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #EEEEEE;
+  border-radius: 16px;
+}
+@media only screen and (max-width: 1024px) {
+
+}
+
+@media only screen and (max-width: 768px) {
+  .zoomBox {
+    flex-direction: column;
+
+  }
+  .zoomDiv {
+    margin: 2% 0 3% 0;
+  }
+  .heading {
+    font-size: 17px;
+  }
+  .zoomDivTxt {
+    font-size: 11px;
+  }
+}

@@ -1,0 +1,38 @@
+.heading {
+  padding-top: 3%;
+  padding-bottom: 2%;
+  font-family: Averta-Regular;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.2px;
+  text-align: left;
+  margin-left: -2px!important;
+}
+.requiredHeader {
+  display: flex;
+  flex-flow: wrap;
+  gap: 40px;
+}
+.imageStyle {
+  border-radius: 50%;
+  width: 22vh;
+}
+@media only screen and (max-width: 1024px) {
+  .imageStyle {
+    width: 50%;
+  }
+  .requiredHeader {
+    gap: 1px;
+  }
+  .requiredDiv {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+}

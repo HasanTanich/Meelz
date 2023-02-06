@@ -1,0 +1,73 @@
+<div class="container">
+  <app-header [quantity]="quantity"></app-header>
+</div>
+<mat-divider></mat-divider>
+<div style="padding: 0 9% 5% 9%">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs_item">
+      <a routerLink="/dashboard" class="breadcrumbs_link">Home</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <a  *ngIf="mealKitArray" href="/meal-kits" class="breadcrumbs_link">{{mealKitArray.dataScreen}}</a>
+    </li>
+    <li class="breadcrumbs_item">
+      <p  *ngIf="mealKitArray">{{mealKitArray.mealKitInfo.heading}}</p>
+    </li>
+  </ul>
+  <div class="menuMain">
+    <div class="leftSide" style="height: 84vh">
+      <app-menu-details-carousel *ngIf="mealKitArray && mealKitArray.imageURL.length > 0" [isNavigationVisible]="true" [isThumbnailsVisible]="true" [slides]="mealKitArray.imageURL"
+        [slideTemplateRef]="slide" [thumbnailTemplateRef]="thumbnail"></app-menu-details-carousel>
+      <ng-template #slide let-slide>
+        <div [ngStyle]="{
+        'background-size': 'cover',
+        'background-image': 'url(' + slide + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center',
+        'width': '100%',
+        'height': '100%',
+        'border-radius': '16px'
+    }">
+        </div>
+      </ng-template>
+      <ng-template #thumbnail let-slide>
+        <div [ngStyle]="{
+        'background-size': 'cover',
+        'background-image': 'url(' + slide + ')',
+        'background-repeat': 'no-repeat',
+        'background-position': 'center center',
+        'width': '100%',
+        'height': '100%',
+        'border-radius': '16px'
+      }"></div>
+      </ng-template>
+    </div>
+    <div class="rightSide">
+      <app-meal-kits-details-info *ngIf="mealKitData" [masterClass]="mealKitData"></app-meal-kits-details-info>
+      <app-meal-kits-details-cart *ngIf="mealKitData" [masterClass]="mealKitData" (newItemEvent)="addItem($event)"
+      (oldItemEvent)="removeItem($event)"></app-meal-kits-details-cart>
+      <mat-divider class="matDivider"></mat-divider>
+      <div class="chef">
+        <img *ngIf="mealKitArray" class="chefImg" src="{{mealKitArray.chef.imageURL}}">
+        <div class="chef-desc">
+          <p style="color: #373737; height: 5px!important;">By Chef</p>
+          <p *ngIf="mealKitArray"><b>{{mealKitArray.chef.chefName}}</b></p>
+          <p *ngIf="mealKitArray" style="color: #373737">{{mealKitArray.chef.jobRole}}</p>
+        </div>
+      </div>
+      <div class="tabMenu">
+        <nav mat-tab-nav-bar class="tabGroupDiv">
+          <a class="textAlignLeft" mat-tab-link routerLink="ingredients"
+            routerLinkActive="activeLink">INGREDIENTS</a>
+          <a class="textAlignLeft" mat-tab-link routerLink="recipe" routerLinkActive="activeLink">RECIPE</a>
+          <a class="textAlignLeft" mat-tab-link routerLink="required" routerLinkActive="activeLink">REQUIRED</a>
+        </nav>
+        <div class="tabGroupDiv2">
+          <mat-divider style="margin-bottom: 4%"></mat-divider>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

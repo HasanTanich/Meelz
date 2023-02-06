@@ -1,0 +1,242 @@
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta
+  name="google-signin-client_id"
+  content="630108236691-mbmnovnitmg6ph98tjcnu7gp12ak5eu0.apps.googleusercontent.com"
+/>
+
+<div class="main" fxLayout="column">
+  <form [formGroup]="form" novalidate>
+    <div class="headerDiv" fxLayout="row">
+      <h3 class="header" fxFlex="95">Create account</h3>
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button mat-button mat-dialog-close fxFlex="5" class="close-icon">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M1 1L17 17M1 17L17 1"
+            stroke="#433B3B"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="nameDiv">
+      <p class="name-label">Name</p>
+      <input
+        matInput
+        type="text"
+        name="name"
+        class="name-box"
+        formControlName="name"
+        required
+      />
+    </div>
+    <mat-error *ngIf="form.get('name').invalid && form.get('name').touched">
+      * name is required
+    </mat-error>
+
+    <div class="emailDiv">
+      <p class="email-label">Email</p>
+      <input
+        matInput
+        type="email"
+        name="email"
+        class="email-box"
+        formControlName="email"
+        required
+      />
+    </div>
+    <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">
+      {{ emailErrorMessage() }}
+    </mat-error>
+
+    <div class="phoneDiv">
+      <p class="phone-label">Phone</p>
+      <input
+        matInput
+        type="number"
+        name="phone"
+        formControlName="phoneNumber"
+        class="phone-box"
+      />
+    </div>
+
+    <div class="passwordDiv">
+      <p class="password-label">Password</p>
+      <div class="pass-box">
+        <input
+          matInput
+          type="password"
+          name="password"
+          required
+          [type]="hide ? 'password' : 'text'"
+          class="password-input"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$"
+          formControlName="password"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon class="show-pass-icon">{{
+            hide ? "visibility_off" : "visibility"
+          }}</mat-icon>
+        </button>
+      </div>
+    </div>
+    <mat-error
+      *ngIf="form.get('password').invalid && form.get('password').touched"
+    >
+      {{ passwordErrorMessage() }}
+    </mat-error>
+
+    <div class="termsDiv">
+      <p class="terms-label">
+        By creating an account you agree to the
+        <a (click)="closeDialog()" routerLink="/policy" class="privacy-label"
+          >privacy policy</a
+        >
+        and to the
+        <a (click)="closeDialog()" routerLink="/terms" class="termsOfUse-label"
+          >terms of use</a
+        >.
+      </p>
+    </div>
+  </form>
+
+  <div class="buttonDiv">
+    <button
+      mat-button
+      class="register-button"
+      (click)="validateForm()"
+      type="submit"
+    >
+      Create
+    </button>
+  </div>
+  <div class="orDiv or-label">
+    <p><span class="or-label-letters">or</span></p>
+  </div>
+  <div class="iconDiv" fxLayout="row">
+    <div class="facebook-icon">
+      <a>
+        <svg
+          (click)="signUpWithFacebook()"
+          width="23"
+          height="23"
+          viewBox="0 0 23 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M22.2147 11.1074C22.2147 4.97293 17.2418 0 11.1074 0C4.97293 0 0 4.97293 0 11.1074C0 16.6514 4.06182 21.2465 9.37184 22.0798V14.3181H6.55161V11.1074H9.37184V8.66027C9.37184 5.87649 11.0301 4.33881 13.5673 4.33881C14.7825 4.33881 16.0536 4.55575 16.0536 4.55575V7.28921H14.653C13.2732 7.28921 12.8429 8.14538 12.8429 9.02378V11.1074H15.9234L15.431 14.3181H12.8429V22.0798C18.1529 21.2465 22.2147 16.6514 22.2147 11.1074Z"
+            fill="#1877F2"
+          />
+          <path
+            d="M15.4302 14.4177L15.9226 11.207H12.8421V9.12344C12.8421 8.24505 13.2723 7.38887 14.6522 7.38887H16.0528V4.65542C16.0528 4.65542 14.7816 4.43848 13.5664 4.43848C11.0293 4.43848 9.37101 5.97615 9.37101 8.75993V11.207H6.55078V14.4177H9.37101V22.1795C9.93649 22.2682 10.5161 22.3144 11.1065 22.3144C11.697 22.3144 12.2765 22.2682 12.8421 22.1795V14.4177H15.4302Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="google-icon">
+      <a>
+        <svg
+          (click)="signUpWithGoogle()"
+          width="22"
+          height="22"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.69357 10.8896C4.69357 10.1823 4.81098 9.5041 5.02077 8.86808L1.35064 6.06555C0.635336 7.51778 0.232422 9.15428 0.232422 10.8896C0.232422 12.6236 0.634996 14.2589 1.34911 15.7103L5.0172 12.9023C4.80944 12.2692 4.69357 11.5935 4.69357 10.8896Z"
+            fill="#FBBC05"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.1375 4.45486C12.6742 4.45486 14.0621 4.99933 15.1526 5.89024L18.3248 2.72239C16.3918 1.03944 13.9134 0 11.1375 0C6.82799 0 3.12418 2.46445 1.35071 6.06549L5.02066 8.86802C5.86631 6.30115 8.27682 4.45486 11.1375 4.45486Z"
+            fill="#EA4335"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M11.1375 17.3244C8.27699 17.3244 5.86648 15.4781 5.02083 12.9112L1.35071 15.7132C3.12418 19.3148 6.82799 21.7792 11.1375 21.7792C13.7973 21.7792 16.3368 20.8347 18.2426 19.0652L14.759 16.372C13.776 16.9912 12.5382 17.3244 11.1375 17.3244Z"
+            fill="#34A853"
+          />
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M21.5467 10.8895C21.5467 10.246 21.4475 9.553 21.2988 8.90967H11.1375V13.117H16.9865C16.694 14.5515 15.8981 15.6542 14.7589 16.3719L18.2426 19.065C20.2445 17.207 21.5467 14.439 21.5467 10.8895Z"
+            fill="#4285F4"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="twitter-icon">
+      <a>
+        <svg
+          (click)="signUpWithTwitter()"
+          width="24"
+          height="19"
+          viewBox="0 0 24 19"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M7.54753 19C16.6042 19 21.5578 11.6895 21.5578 5.34986C21.5578 5.14224 21.5578 4.93554 21.5434 4.72975C22.507 4.05058 23.3389 3.20975 24 2.24647C23.1014 2.63444 22.148 2.88882 21.1718 3.00126C22.1995 2.40189 22.9692 1.45843 23.3366 0.347733C22.3701 0.906508 21.3126 1.30037 20.2099 1.51223C19.2789 0.547632 17.9786 0 16.6196 0C13.9158 0 11.691 2.16769 11.691 4.80195C11.691 5.1674 11.7338 5.53171 11.8185 5.88767C7.86145 5.69444 4.16948 3.87083 1.67039 0.87527C0.370828 3.05493 1.04325 5.87963 3.19486 7.27942C2.41134 7.25682 1.64466 7.05084 0.96 6.67895V6.73974C0.960656 9.01475 2.62158 10.9921 4.91039 11.4426C4.18552 11.6352 3.42478 11.6633 2.68706 11.5249C3.33052 13.4743 5.18602 14.8181 7.28738 14.8565C5.54409 16.1913 3.38939 16.9164 1.17216 16.9142C0.780375 16.9135 0.388969 16.8904 0 16.845C2.25159 18.2528 4.87219 18.9997 7.54753 18.9963"
+            fill="#1DA1F2"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="linkedin-icon">
+      <a>
+        <svg
+          (click)="signUpWithLinkedin()"
+          width="21"
+          height="21"
+          viewBox="0 0 21 21"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M20.0368 2.5046C20.0368 1.12226 18.9146 0 17.5322 0H2.5046C1.12226 0 0 1.12226 0 2.5046V17.5322C0 18.9146 1.12226 20.0368 2.5046 20.0368H17.5322C18.9146 20.0368 20.0368 18.9146 20.0368 17.5322V2.5046Z"
+            fill="#2867B2"
+          />
+          <path
+            d="M5.74337 6.99536H2.38721V17.0905H5.74337V6.99536Z"
+            fill="white"
+          />
+          <path
+            d="M4.09002 2.12305C2.94177 2.12305 2.19153 2.87795 2.19153 3.86738C2.19153 4.83604 2.91896 5.61176 4.0456 5.61176H4.06728C5.23751 5.61176 5.96592 4.83604 5.96592 3.86738C5.9442 2.87795 5.23759 2.12305 4.09002 2.12305Z"
+            fill="white"
+          />
+          <path
+            d="M13.9814 6.75079C12.2012 6.75079 11.4038 7.72982 10.9572 8.41749V6.98818H7.60193C7.64642 7.93512 7.60193 17.0833 7.60193 17.0833H10.9572V11.4455C10.9572 11.1437 10.9789 10.842 11.0678 10.6264C11.31 10.0237 11.8625 9.39941 12.7895 9.39941C14.0031 9.39941 14.4893 10.3255 14.4893 11.682V17.0833H17.8447V11.2942C17.8447 8.19329 16.1891 6.75079 13.9814 6.75079Z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="logInDiv" fxLayout="row">
+    <p class="account-label">Already have an account?</p>
+    <a class="logIn-label" (click)="openLogInDialog()">Log in</a>
+  </div>
+</div>

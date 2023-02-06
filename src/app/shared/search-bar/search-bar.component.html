@@ -1,0 +1,36 @@
+<form class="search-box">
+  <svg
+    width="17"
+    height="17"
+    viewBox="0 0 17 17"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="7.04" cy="7.04" r="6.04" stroke="#373737" stroke-width="2" />
+    <path
+      d="M12.1602 11.5195L16.0002 15.3595"
+      stroke="#373737"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+  </svg>
+  <input
+    matInput
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="Search {{ pageItems }}"
+    name="search"
+    class="search-input"
+    required
+    (ngModelChange)="onChange()"
+  />
+  <button
+    mat-button
+    matSuffix
+    class="search-button"
+    (click)="onActiveChange()"
+    type="submit"
+  >
+    Search
+  </button>
+</form>

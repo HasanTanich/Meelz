@@ -1,0 +1,100 @@
+<div [ngClass]="[chefDetails ? 'chef-filters-tab' : '']" class="filters-tab">
+  <div class="filters-tab-btns">
+    <button
+      mat-stroked-button
+      (click)="sortFamily()"
+      *ngIf="menuPage"
+      [ngClass]="[
+        !reverseFamily._isScalar ? 'button-standard' : 'button-active'
+      ]"
+      class="filter-btn"
+    >
+      {{ Family }}
+      <span *ngIf="reverseFamily._isScalar" class="vl"></span>
+      <span *ngIf="reverseFamily._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      *ngIf="chefTablePage || menuPage"
+      (click)="sortChef()"
+      [ngClass]="[!reverseChef._isScalar ? 'button-standard' : 'button-active']"
+      class="filter-btn"
+    >
+      {{ Chef }}
+      <span *ngIf="reverseChef._isScalar" class="vl"></span>
+      <span *ngIf="reverseChef._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      *ngIf="chefTablePage"
+      (click)="sortSeats()"
+      [ngClass]="[
+        !reverseSeats._isScalar ? 'button-standard' : 'button-active'
+      ]"
+      class="filter-btn"
+    >
+      {{ Seats }}
+      <span *ngIf="reverseSeats._isScalar" class="vl"></span>
+      <span *ngIf="reverseSeats._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      *ngIf="chefTablePage"
+      (click)="sortDuration()"
+      [ngClass]="[
+        !reverseDuration._isScalar ? 'button-standard' : 'button-active'
+      ]"
+      class="filter-btn-duration"
+    >
+      {{ Duration }}
+      <span *ngIf="reverseDuration._isScalar" class="vl"></span>
+      <span *ngIf="reverseDuration._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      (click)="sortRating()"
+      [ngClass]="[
+        !reverseRating._isScalar ? 'button-standard' : 'button-active'
+      ]"
+      class="filter-btn"
+    >
+      {{ Rating }}
+      <span *ngIf="reverseRating._isScalar" class="vl"></span>
+      <span *ngIf="reverseRating._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      *ngIf="!chefPage"
+      (click)="sortPrice()"
+      [ngClass]="[
+        !reversePrice._isScalar ? 'button-standard' : 'button-active'
+      ]"
+      class="filter-btn"
+    >
+      {{ Price }}
+      <span *ngIf="reversePrice._isScalar" class="vl"></span>
+      <span *ngIf="reversePrice._isScalar" class="vl1">X</span>
+    </button>
+    <button
+      mat-stroked-button
+      *ngIf="RecipeView || chefPage || MasterClassesPage"
+      (click)="sortName()"
+      [ngClass]="[!reverseName._isScalar ? 'button-standard' : 'button-active']"
+      class="filter-btn"
+    >
+      {{ Name }}
+      <span *ngIf="reverseName._isScalar" class="vl"></span>
+      <span *ngIf="reverseName._isScalar" class="vl1">X</span>
+    </button>
+  </div>
+  <div class="filters-tab-sort">
+    <p>Sort by:</p>
+    <mat-form-field>
+      <mat-select [(value)]="selectedOption" class="selectClass">
+        <mat-option *ngFor="let f of options" [value]="f.value">
+          {{ f.viewValue }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
